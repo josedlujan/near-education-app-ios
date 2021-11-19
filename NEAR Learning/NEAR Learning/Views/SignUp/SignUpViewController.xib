@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="NEAR_Learning" customModuleProvider="target">
+            <connections>
+                <outlet property="textFieldEmail" destination="1cM-GD-gqV" id="gDE-KU-S1g"/>
+                <outlet property="textFieldName" destination="kpu-yf-fBf" id="eJa-zK-lFv"/>
+                <outlet property="textFieldPassword" destination="zzi-Dw-Gak" id="iZt-1Y-HwT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-2h-LJj">
+                    <rect key="frame" x="20" y="318" width="374" height="260"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tag-I2-D7C">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpu-yf-fBf">
+                                    <rect key="frame" x="15" y="16" width="344" height="18.5"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="InputTextColor"/>
+                            <constraints>
+                                <constraint firstItem="kpu-yf-fBf" firstAttribute="centerY" secondItem="Tag-I2-D7C" secondAttribute="centerY" id="280-2D-pVW"/>
+                                <constraint firstAttribute="height" constant="50" id="D6X-xo-4QT"/>
+                                <constraint firstAttribute="trailing" secondItem="kpu-yf-fBf" secondAttribute="trailing" constant="15" id="as7-Tq-OO7"/>
+                                <constraint firstItem="kpu-yf-fBf" firstAttribute="leading" secondItem="Tag-I2-D7C" secondAttribute="leading" constant="15" id="ozk-qi-nPt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTz-eJ-ajr">
+                            <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cM-GD-gqV">
+                                    <rect key="frame" x="15" y="16" width="344" height="18.5"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="InputTextColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="WeO-y8-EwV"/>
+                                <constraint firstItem="1cM-GD-gqV" firstAttribute="centerY" secondItem="TTz-eJ-ajr" secondAttribute="centerY" id="azt-EK-GXt"/>
+                                <constraint firstAttribute="trailing" secondItem="1cM-GD-gqV" secondAttribute="trailing" constant="15" id="fFB-ZS-L1f"/>
+                                <constraint firstItem="1cM-GD-gqV" firstAttribute="leading" secondItem="TTz-eJ-ajr" secondAttribute="leading" constant="15" id="i2n-6d-iv1"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IR0-bQ-adt">
+                            <rect key="frame" x="0.0" y="140" width="374" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzi-Dw-Gak">
+                                    <rect key="frame" x="15" y="16.5" width="344" height="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="InputTextColor"/>
+                            <constraints>
+                                <constraint firstItem="zzi-Dw-Gak" firstAttribute="leading" secondItem="IR0-bQ-adt" secondAttribute="leading" constant="15" id="BLr-CB-U14"/>
+                                <constraint firstAttribute="trailing" secondItem="zzi-Dw-Gak" secondAttribute="trailing" constant="15" id="SQD-Dt-eJF"/>
+                                <constraint firstItem="zzi-Dw-Gak" firstAttribute="centerY" secondItem="IR0-bQ-adt" secondAttribute="centerY" id="TeO-ju-jgD"/>
+                                <constraint firstAttribute="height" constant="50" id="bPX-6B-yMl"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Li-o6-CN3">
+                            <rect key="frame" x="0.0" y="210" width="374" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEg-6s-ZIV">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                    <color key="tintColor" name="InputTextColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="REGISTRARSE"/>
+                                    <connections>
+                                        <action selector="signUpAction:" destination="-1" eventType="touchUpInside" id="x6b-wt-Qab"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="zEg-6s-ZIV" firstAttribute="centerY" secondItem="1Li-o6-CN3" secondAttribute="centerY" id="9j3-fw-Y9D"/>
+                                <constraint firstItem="zEg-6s-ZIV" firstAttribute="leading" secondItem="1Li-o6-CN3" secondAttribute="leading" id="NZr-aI-F28"/>
+                                <constraint firstItem="zEg-6s-ZIV" firstAttribute="top" secondItem="1Li-o6-CN3" secondAttribute="top" id="RA8-9W-qg4"/>
+                                <constraint firstItem="zEg-6s-ZIV" firstAttribute="centerX" secondItem="1Li-o6-CN3" secondAttribute="centerX" id="XKm-CF-koD"/>
+                                <constraint firstAttribute="bottom" secondItem="zEg-6s-ZIV" secondAttribute="bottom" id="Z1H-Ap-8ld"/>
+                                <constraint firstAttribute="trailing" secondItem="zEg-6s-ZIV" secondAttribute="trailing" id="asA-Si-m8L"/>
+                                <constraint firstAttribute="height" constant="50" id="xwh-C3-TcO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.38429909940000001" green="7.855203876e-05" blue="0.92939001320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.38431372549019605" green="0.0" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dsh-2h-LJj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SHn-g2-BoB"/>
+                <constraint firstItem="dsh-2h-LJj" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="f6l-BH-sMC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dsh-2h-LJj" secondAttribute="trailing" constant="20" id="j1X-6c-FCF"/>
+                <constraint firstItem="dsh-2h-LJj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yg0-sF-7wo"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="109"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="InputTextColor">
+            <color red="0.52941501140000002" green="0.23922303319999999" blue="0.95684260129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

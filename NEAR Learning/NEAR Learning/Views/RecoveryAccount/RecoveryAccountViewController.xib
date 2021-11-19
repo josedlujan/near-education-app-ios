@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecoveryAccountViewController" customModule="NEAR_Learning" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="klf-ul-Q8f">
+                    <rect key="frame" x="20" y="348" width="374" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omt-iW-aQY">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfb-GU-W6Z">
+                                    <rect key="frame" x="15" y="16" width="344" height="18.5"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="InputTextColor"/>
+                            <constraints>
+                                <constraint firstItem="lfb-GU-W6Z" firstAttribute="leading" secondItem="Omt-iW-aQY" secondAttribute="leading" constant="15" id="6AN-7V-iqR"/>
+                                <constraint firstAttribute="trailing" secondItem="lfb-GU-W6Z" secondAttribute="trailing" constant="15" id="E9y-sD-Ppl"/>
+                                <constraint firstItem="lfb-GU-W6Z" firstAttribute="centerY" secondItem="Omt-iW-aQY" secondAttribute="centerY" id="knP-Cb-ZEn"/>
+                                <constraint firstAttribute="height" constant="50" id="mbO-Bd-9Hc"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFN-Sg-2ff">
+                            <rect key="frame" x="0.0" y="150" width="374" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMZ-MC-91f">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                    <color key="tintColor" name="InputTextColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="RECUPERAR"/>
+                                    <connections>
+                                        <action selector="recoveryAction:" destination="-1" eventType="touchUpInside" id="51v-KB-wAp"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="SMZ-MC-91f" secondAttribute="bottom" id="1x2-zV-fKD"/>
+                                <constraint firstItem="SMZ-MC-91f" firstAttribute="top" secondItem="TFN-Sg-2ff" secondAttribute="top" id="4Lc-u9-w6O"/>
+                                <constraint firstItem="SMZ-MC-91f" firstAttribute="leading" secondItem="TFN-Sg-2ff" secondAttribute="leading" id="CLY-KA-KHe"/>
+                                <constraint firstAttribute="height" constant="50" id="Izw-1G-XBA"/>
+                                <constraint firstAttribute="trailing" secondItem="SMZ-MC-91f" secondAttribute="trailing" id="lih-8k-6pO"/>
+                                <constraint firstItem="SMZ-MC-91f" firstAttribute="centerX" secondItem="TFN-Sg-2ff" secondAttribute="centerX" id="ltJ-FA-pOZ"/>
+                                <constraint firstItem="SMZ-MC-91f" firstAttribute="centerY" secondItem="TFN-Sg-2ff" secondAttribute="centerY" id="mgc-l4-ykY"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="GeneralColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="klf-ul-Q8f" secondAttribute="trailing" constant="20" id="104-48-QTy"/>
+                <constraint firstItem="klf-ul-Q8f" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Mt6-tG-YRD"/>
+                <constraint firstItem="klf-ul-Q8f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SrA-05-DUI"/>
+                <constraint firstItem="klf-ul-Q8f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="UgL-rS-rN0"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="109"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="GeneralColor">
+            <color red="0.38431372549019605" green="0.0" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="InputTextColor">
+            <color red="0.52941501140000002" green="0.23922303319999999" blue="0.95684260129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
