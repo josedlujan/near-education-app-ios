@@ -1,28 +1,28 @@
 //
-//  HomeViewController.swift
+//  LessonViewController.swift
 //  NEAR Learning
 //
-//  Created by Isaac R on 19/11/21.
+//  Created by Isaac R on 02/12/21.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class LessonViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      setupUI()
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupUI()
+  }
   
   private func setupUI(){
+    title = "Lecciones"
     tableView.register(UINib(nibName: "CoursesCell", bundle: nil), forCellReuseIdentifier: "CoursesCell")
-    title = "Inicio"
   }
+
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension LessonViewController: UITableViewDataSource, UITableViewDelegate {
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }

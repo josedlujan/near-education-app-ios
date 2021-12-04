@@ -15,7 +15,7 @@ class RootViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupAuthNotification()
-    showLoginScreen()
+    showHomeScreen()
   }
 
   func setupAuthNotification() {
@@ -29,14 +29,9 @@ class RootViewController: UIViewController {
   }
 
   func setupHomeController() -> UIViewController {
-    let homeVC = HomeViewController()
-    homeVC.view.frame = view.bounds
-    let navigationController = UINavigationController(rootViewController: homeVC)
-    navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-    navigationController.navigationBar.isTranslucent = false
-    navigationController.navigationBar.tintColor = .white
-    navigationController.transparetNavigationBar()
-    return navigationController
+    let tabBarVC = TabBarViewController()
+    tabBarVC.view.frame = view.bounds
+    return tabBarVC
   }
 
   func setupLoginController() -> UIViewController {

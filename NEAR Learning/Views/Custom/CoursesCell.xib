@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CoursesCell" id="KGk-i7-Jjw" customClass="CoursesCell" customModule="NEAR_Learning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdh-MX-4pQ">
+                        <rect key="frame" x="8" y="7" width="304" height="126"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nvp-sq-pUw">
+                                <rect key="frame" x="0.0" y="0.0" width="75.5" height="75.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Nvp-sq-pUw" secondAttribute="height" multiplier="1:1" id="msR-gb-Mec"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XqP-Iq-aRK">
+                                <rect key="frame" x="15" y="85.5" width="274" height="2.5"/>
+                                <color key="progressTintColor" name="GeneralColor"/>
+                                <color key="trackTintColor" red="0.52941176470588236" green="0.23899999260902405" blue="0.9570000171661377" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMA DEL DÍA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGU-XQ-fHZ">
+                                <rect key="frame" x="90.5" y="8.5" width="158.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-uL-kXm">
+                                <rect key="frame" x="259" y="26" width="15" height="11.5"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fJJ-uL-kXm" secondAttribute="height" multiplier="1:1" id="l56-r2-KSM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progreso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mql-vV-YFO">
+                                <rect key="frame" x="15" y="97" width="55" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="GeneralColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nvp-sq-pUw" firstAttribute="top" secondItem="kdh-MX-4pQ" secondAttribute="top" id="0Uk-bC-TeS"/>
+                            <constraint firstAttribute="trailing" secondItem="fJJ-uL-kXm" secondAttribute="trailing" constant="30" id="0fT-iT-7Wn"/>
+                            <constraint firstItem="Mql-vV-YFO" firstAttribute="leading" secondItem="XqP-Iq-aRK" secondAttribute="leading" id="5gS-oa-y28"/>
+                            <constraint firstItem="Mql-vV-YFO" firstAttribute="top" secondItem="XqP-Iq-aRK" secondAttribute="bottom" constant="10" id="PQX-Tq-VGw"/>
+                            <constraint firstItem="Nvp-sq-pUw" firstAttribute="leading" secondItem="kdh-MX-4pQ" secondAttribute="leading" id="TZQ-7X-qnF"/>
+                            <constraint firstItem="VGU-XQ-fHZ" firstAttribute="leading" secondItem="Nvp-sq-pUw" secondAttribute="trailing" constant="15" id="Zn7-f4-0qH"/>
+                            <constraint firstItem="fJJ-uL-kXm" firstAttribute="leading" secondItem="VGU-XQ-fHZ" secondAttribute="trailing" constant="10" id="cOa-5r-mkc"/>
+                            <constraint firstItem="XqP-Iq-aRK" firstAttribute="centerX" secondItem="kdh-MX-4pQ" secondAttribute="centerX" id="glK-5v-ydD"/>
+                            <constraint firstItem="XqP-Iq-aRK" firstAttribute="width" secondItem="kdh-MX-4pQ" secondAttribute="width" multiplier="0.9" id="jHp-EB-He1"/>
+                            <constraint firstItem="Nvp-sq-pUw" firstAttribute="height" secondItem="kdh-MX-4pQ" secondAttribute="height" multiplier="0.6" id="jdP-61-UJk"/>
+                            <constraint firstItem="VGU-XQ-fHZ" firstAttribute="centerY" secondItem="Nvp-sq-pUw" secondAttribute="centerY" multiplier="0.5" id="lnR-CS-6AS"/>
+                            <constraint firstItem="XqP-Iq-aRK" firstAttribute="top" secondItem="Nvp-sq-pUw" secondAttribute="bottom" constant="10" id="mBx-oY-kMN"/>
+                            <constraint firstItem="fJJ-uL-kXm" firstAttribute="centerY" secondItem="kdh-MX-4pQ" secondAttribute="centerY" multiplier="0.5" id="sFW-XE-Ah8"/>
+                            <constraint firstItem="fJJ-uL-kXm" firstAttribute="height" secondItem="kdh-MX-4pQ" secondAttribute="height" multiplier="0.12" id="uew-Zc-Sce"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kdh-MX-4pQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="A38-YH-rrb"/>
+                    <constraint firstItem="kdh-MX-4pQ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.95" id="bfc-QX-Wbl"/>
+                    <constraint firstItem="kdh-MX-4pQ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.9" id="iXY-m1-zUp"/>
+                    <constraint firstItem="kdh-MX-4pQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kFL-Yl-xIV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="kdh-MX-4pQ" id="6mU-B0-X0H"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <namedColor name="GeneralColor">
+            <color red="0.38400000333786011" green="0.0" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
