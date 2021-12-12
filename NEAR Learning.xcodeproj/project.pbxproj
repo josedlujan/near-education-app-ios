@@ -21,6 +21,8 @@
 		481EA93F2759DEDE007678A3 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EA93D2759DEDE007678A3 /* TestCell.swift */; };
 		481EA9402759DEDE007678A3 /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481EA93E2759DEDE007678A3 /* TestCell.xib */; };
 		481EA9422759EF36007678A3 /* UIView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EA9412759EF36007678A3 /* UIView+Action.swift */; };
+		48DAB5F0276574E600EA891F /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DAB5EE276574E600EA891F /* LessonCell.swift */; };
+		48DAB5F1276574E600EA891F /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48DAB5EF276574E600EA891F /* LessonCell.xib */; };
 		48F5F1242748012B00DCF0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5F1232748012B00DCF0FD /* AppDelegate.swift */; };
 		48F5F1262748012B00DCF0FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5F1252748012B00DCF0FD /* SceneDelegate.swift */; };
 		48F5F12B2748012B00DCF0FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F5F1292748012B00DCF0FD /* Main.storyboard */; };
@@ -77,6 +79,8 @@
 		481EA93D2759DEDE007678A3 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		481EA93E2759DEDE007678A3 /* TestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
 		481EA9412759EF36007678A3 /* UIView+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Action.swift"; sourceTree = "<group>"; };
+		48DAB5EE276574E600EA891F /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
+		48DAB5EF276574E600EA891F /* LessonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonCell.xib; sourceTree = "<group>"; };
 		48F5F1202748012B00DCF0FD /* NEAR Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NEAR Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F5F1232748012B00DCF0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48F5F1252748012B00DCF0FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				4808886D2752729700BD0EED /* CoursesCell.xib */,
 				481EA93D2759DEDE007678A3 /* TestCell.swift */,
 				481EA93E2759DEDE007678A3 /* TestCell.xib */,
+				48DAB5EE276574E600EA891F /* LessonCell.swift */,
+				48DAB5EF276574E600EA891F /* LessonCell.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				48F5F12B2748012B00DCF0FD /* Main.storyboard in Resources */,
 				481EA9382759DD0E007678A3 /* SnippetViewController.xib in Resources */,
 				481EA9402759DEDE007678A3 /* TestCell.xib in Resources */,
+				48DAB5F1276574E600EA891F /* LessonCell.xib in Resources */,
 				48F5F168274809C800DCF0FD /* HomeViewController.xib in Resources */,
 				481EA93C2759DD1B007678A3 /* PathViewController.xib in Resources */,
 			);
@@ -484,6 +491,7 @@
 				48F5F16B274838BD00DCF0FD /* UITextField+Action.swift in Sources */,
 				4808886E2752729700BD0EED /* CoursesCell.swift in Sources */,
 				48F5F1242748012B00DCF0FD /* AppDelegate.swift in Sources */,
+				48DAB5F0276574E600EA891F /* LessonCell.swift in Sources */,
 				48F5F17827486A3300DCF0FD /* RecoveryAccountPresenter.swift in Sources */,
 				48F5F1592748071000DCF0FD /* RootViewController.swift in Sources */,
 				481EA9332759DCFD007678A3 /* LessonViewController.swift in Sources */,

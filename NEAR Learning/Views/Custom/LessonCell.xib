@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LessonCell" id="ja6-KT-L0W" customClass="LessonCell" customModule="NEAR_Learning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ja6-KT-L0W" id="9JB-po-k9M">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksO-c4-0uB">
+                        <rect key="frame" x="8" y="10" width="304" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnLesson" translatesAutoresizingMaskIntoConstraints="NO" id="tnk-Pe-uXd">
+                                <rect key="frame" x="0.0" y="4" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tnk-Pe-uXd" secondAttribute="height" multiplier="1:1" id="nZM-Bs-uqW"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="qmR-Hj-hia">
+                                <rect key="frame" x="82" y="20.5" width="181" height="39.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rust" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6Z-Qc-41K">
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="GeneralColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programin languaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqp-Mx-JQj">
+                                        <rect key="frame" x="0.0" y="21.5" width="132" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gLj-gc-Jjf">
+                                <rect key="frame" x="273" y="34" width="16" height="12.5"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gLj-gc-Jjf" secondAttribute="height" multiplier="1:1" id="zZ1-MN-DK8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gLj-gc-Jjf" firstAttribute="centerY" secondItem="ksO-c4-0uB" secondAttribute="centerY" id="0EM-7K-7M4"/>
+                            <constraint firstItem="gLj-gc-Jjf" firstAttribute="height" secondItem="ksO-c4-0uB" secondAttribute="height" multiplier="0.2" id="6P3-Bx-VQA"/>
+                            <constraint firstAttribute="trailing" secondItem="gLj-gc-Jjf" secondAttribute="trailing" constant="15" id="B9N-9h-uI7"/>
+                            <constraint firstItem="tnk-Pe-uXd" firstAttribute="leading" secondItem="ksO-c4-0uB" secondAttribute="leading" id="CPR-Ev-FSJ"/>
+                            <constraint firstItem="tnk-Pe-uXd" firstAttribute="height" secondItem="ksO-c4-0uB" secondAttribute="height" multiplier="0.9" id="Jdt-we-0d1"/>
+                            <constraint firstItem="gLj-gc-Jjf" firstAttribute="leading" secondItem="qmR-Hj-hia" secondAttribute="trailing" constant="10" id="L2a-gA-HcA"/>
+                            <constraint firstItem="qmR-Hj-hia" firstAttribute="centerY" secondItem="ksO-c4-0uB" secondAttribute="centerY" id="QAf-j9-1lP"/>
+                            <constraint firstItem="tnk-Pe-uXd" firstAttribute="centerY" secondItem="ksO-c4-0uB" secondAttribute="centerY" id="gf6-rL-Abu"/>
+                            <constraint firstItem="qmR-Hj-hia" firstAttribute="leading" secondItem="tnk-Pe-uXd" secondAttribute="trailing" constant="10" id="xIg-Cr-bJp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ksO-c4-0uB" firstAttribute="height" secondItem="9JB-po-k9M" secondAttribute="height" multiplier="0.8" id="6T0-G4-d56"/>
+                    <constraint firstItem="ksO-c4-0uB" firstAttribute="centerY" secondItem="9JB-po-k9M" secondAttribute="centerY" id="HHs-VC-xom"/>
+                    <constraint firstItem="ksO-c4-0uB" firstAttribute="centerX" secondItem="9JB-po-k9M" secondAttribute="centerX" id="jQy-mu-mJW"/>
+                    <constraint firstItem="ksO-c4-0uB" firstAttribute="width" secondItem="9JB-po-k9M" secondAttribute="width" multiplier="0.95" id="xKf-Hn-pci"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="tG3-Tw-kHd"/>
+            <point key="canvasLocation" x="138" y="-6"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="icnLesson" width="40" height="40"/>
+        <namedColor name="GeneralColor">
+            <color red="0.38400000333786011" green="0.0" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

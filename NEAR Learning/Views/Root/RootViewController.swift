@@ -15,12 +15,13 @@ class RootViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupAuthNotification()
-    showHomeScreen()
+    //showHomeScreen()
+    showLoginScreen()
   }
 
   func setupAuthNotification() {
     let notification = NotificationCenter.default
-    observer = notification.addObserver(forName: Notification.Name(rawValue: ""),
+    observer = notification.addObserver(forName: Notification.Name(rawValue: "successfullyLogin"),
                                         object: nil, queue: nil) {[weak self] _ in
                                           self?.showHomeScreen()
                                           self?.navigationController?.popToRootViewController(animated: false)
