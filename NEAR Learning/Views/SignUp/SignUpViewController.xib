@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -105,22 +106,41 @@
                         </view>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnLogoGray" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-YO-N8m">
+                    <rect key="frame" x="103.5" y="152.5" width="207" height="53.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTRO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkb-Yy-2qf">
+                    <rect key="frame" x="156" y="216" width="102.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" name="LoginTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.38429909940000001" green="7.855203876e-05" blue="0.92939001320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="0.38431372549019605" green="0.0" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Dkb-Yy-2qf" firstAttribute="top" secondItem="F2s-YO-N8m" secondAttribute="bottom" constant="10" id="KRz-1V-IPf"/>
+                <constraint firstItem="F2s-YO-N8m" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.4" id="LoB-mN-Krb"/>
+                <constraint firstItem="F2s-YO-N8m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PgQ-11-cjm"/>
                 <constraint firstItem="dsh-2h-LJj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SHn-g2-BoB"/>
+                <constraint firstItem="Dkb-Yy-2qf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dBo-SW-MaN"/>
                 <constraint firstItem="dsh-2h-LJj" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="f6l-BH-sMC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dsh-2h-LJj" secondAttribute="trailing" constant="20" id="j1X-6c-FCF"/>
+                <constraint firstItem="F2s-YO-N8m" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="sLU-R1-MTT"/>
+                <constraint firstItem="F2s-YO-N8m" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="wIg-WL-fCR"/>
                 <constraint firstItem="dsh-2h-LJj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yg0-sF-7wo"/>
             </constraints>
             <point key="canvasLocation" x="139" y="109"/>
         </view>
     </objects>
     <resources>
+        <image name="icnLogoGray" width="120" height="33"/>
         <namedColor name="InputTextColor">
-            <color red="0.52941501140000002" green="0.23922303319999999" blue="0.95684260129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.52899998426437378" green="0.23899999260902405" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoginTextColor">
+            <color red="0.9179999828338623" green="0.9179999828338623" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

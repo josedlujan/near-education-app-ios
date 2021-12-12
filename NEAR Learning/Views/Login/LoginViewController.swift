@@ -51,6 +51,10 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginPresenterView {
   func login() {
+    let notification = NotificationCenter.default
+    notification.post(name: Notification.Name(rawValue: "successfullyLogin"),
+            object: nil,
+            userInfo: nil)
   }
   func recoverAccount() {
     let recoveryVC = RecoveryAccountViewController()

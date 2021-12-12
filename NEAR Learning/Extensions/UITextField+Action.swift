@@ -10,9 +10,9 @@ import UIKit
 extension UITextField {
   fileprivate func setPasswordToggleImage(_ button: UIButton) {
     if isSecureTextEntry{
-      button.setImage(UIImage(named: "icnPassInvisible"), for: .normal)
+      button.setImage(UIImage(named: "icnEyeHide"), for: .normal)
     }else{
-      button.setImage(UIImage(named: "icnPassVisible"), for: .normal)
+      button.setImage(UIImage(named: "icnEyeShow"), for: .normal)
     }
   }
   
