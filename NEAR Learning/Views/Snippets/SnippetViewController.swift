@@ -2,7 +2,7 @@
 //  SnippetViewController.swift
 //  NEAR Learning
 //
-//  Created by Isaac R on 02/12/21.
+//  Created by Josue Hernandez on 02/12/21.
 //
 
 import UIKit

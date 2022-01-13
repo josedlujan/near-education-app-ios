@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  NEAR Learning
 //
-//  Created by Isaac R on 19/11/21.
+//  Created by Josue Hernandez on 19/11/21.
 //
 
 import UIKit
