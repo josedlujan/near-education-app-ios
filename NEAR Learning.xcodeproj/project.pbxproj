@@ -754,7 +754,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW5Z9GGJ86;
-¡
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
