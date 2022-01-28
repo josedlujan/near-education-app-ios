@@ -2,7 +2,7 @@
 //  LessonCell.swift
 //  NEAR Learning
 //
-//  Created by Isaac R on 11/12/21.
+//  Created by Josue Hernandez on 11/12/21.
 //
 
 import UIKit

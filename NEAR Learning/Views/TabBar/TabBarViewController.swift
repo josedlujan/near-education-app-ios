@@ -2,7 +2,7 @@
 //  TabBarViewController.swift
 //  NEAR Learning
 //
-//  Created by Isaac R on 27/11/21.
+//  Created by Josue Hernandez on 27/11/21.
 //
 
 import UIKit
