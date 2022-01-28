@@ -48,7 +48,7 @@
 		875D4D4727A3B34600B09175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 875D4D4627A3B34600B09175 /* GoogleService-Info.plist */; };
 		875D4D4A27A3B47400B09175 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 875D4D4927A3B47400B09175 /* FirebaseAuth */; };
 		875D4D4C27A3B47400B09175 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 875D4D4B27A3B47400B09175 /* FirebaseCrashlytics */; };
-		875D4D4F27A3B78A00B09175 /* SignupBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875D4D4E27A3B78A00B09175 /* SignupBO.swift */; };
+		8779226127A3BE5600B41B91 /* SignupBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779226027A3BE5600B41B91 /* SignupBO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +112,7 @@
 		48F5F175274864DA00DCF0FD /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		48F5F17727486A3300DCF0FD /* RecoveryAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryAccountPresenter.swift; sourceTree = "<group>"; };
 		875D4D4627A3B34600B09175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		875D4D4E27A3B78A00B09175 /* SignupBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupBO.swift; sourceTree = "<group>"; };
+		8779226027A3BE5600B41B91 /* SignupBO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupBO.swift; path = "NEAR Learning/BO/SignupBO.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,7 +355,7 @@
 		8779225F27A3BDB200B41B91 /* BO */ = {
 			isa = PBXGroup;
 			children = (
-				875D4D4E27A3B78A00B09175 /* SignupBO.swift */,
+				8779226027A3BE5600B41B91 /* SignupBO.swift */,
 			);
 			name = BO;
 			path = "New Group";
@@ -537,7 +537,7 @@
 				48F5F16D2748410B00DCF0FD /* LoginPresenter.swift in Sources */,
 				48F5F162274807DD00DCF0FD /* SignUpViewController.swift in Sources */,
 				48F5F1712748609100DCF0FD /* RecoveryAccountViewController.swift in Sources */,
-				875D4D4F27A3B78A00B09175 /* SignupBO.swift in Sources */,
+				8779226127A3BE5600B41B91 /* SignupBO.swift in Sources */,
 				48F5F16B274838BD00DCF0FD /* UITextField+Action.swift in Sources */,
 				4808886E2752729700BD0EED /* CoursesCell.swift in Sources */,
 				48F5F1242748012B00DCF0FD /* AppDelegate.swift in Sources */,
