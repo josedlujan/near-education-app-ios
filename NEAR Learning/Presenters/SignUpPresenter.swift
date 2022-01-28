@@ -18,6 +18,10 @@ class SignUpPresenter {
   }
   
   func signUpAction(name: String, email: String, password: String) {
-    view?.signUp()
+      let signupBO = SignupBO()
+      signupBO.signup(email: email, password:password){[weak self]result in
+          self?.view?.signUp()
+      }
+    
   }
 }

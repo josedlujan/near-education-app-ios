@@ -27,7 +27,7 @@ class SignUpViewController: UIViewController {
   }
   
   @IBAction func signUpAction(_ sender: UIButton) {
-    presenter.signUpAction(name: "", email: "", password: "")
+      presenter.signUpAction(name:textFieldName.text!, email:textFieldEmail.text!, password: textFieldPassword.text!)
   }
 }
 

@@ -45,6 +45,10 @@
 		48F5F174274864A400DCF0FD /* UINavigationController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5F173274864A400DCF0FD /* UINavigationController+Action.swift */; };
 		48F5F176274864DA00DCF0FD /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5F175274864DA00DCF0FD /* SignUpPresenter.swift */; };
 		48F5F17827486A3300DCF0FD /* RecoveryAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5F17727486A3300DCF0FD /* RecoveryAccountPresenter.swift */; };
+		875D4D4727A3B34600B09175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 875D4D4627A3B34600B09175 /* GoogleService-Info.plist */; };
+		875D4D4A27A3B47400B09175 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 875D4D4927A3B47400B09175 /* FirebaseAuth */; };
+		875D4D4C27A3B47400B09175 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 875D4D4B27A3B47400B09175 /* FirebaseCrashlytics */; };
+		875D4D4F27A3B78A00B09175 /* SignupBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875D4D4E27A3B78A00B09175 /* SignupBO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,8 @@
 		48F5F173274864A400DCF0FD /* UINavigationController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Action.swift"; sourceTree = "<group>"; };
 		48F5F175274864DA00DCF0FD /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		48F5F17727486A3300DCF0FD /* RecoveryAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryAccountPresenter.swift; sourceTree = "<group>"; };
+		875D4D4627A3B34600B09175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		875D4D4E27A3B78A00B09175 /* SignupBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupBO.swift; path = BO/SignupBO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875D4D4A27A3B47400B09175 /* FirebaseAuth in Frameworks */,
+				875D4D4C27A3B47400B09175 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +230,9 @@
 				48F5F1292748012B00DCF0FD /* Main.storyboard */,
 				48F5F12C2748012F00DCF0FD /* Assets.xcassets */,
 				48F5F12E2748012F00DCF0FD /* LaunchScreen.storyboard */,
+				875D4D4627A3B34600B09175 /* GoogleService-Info.plist */,
 				48F5F1312748012F00DCF0FD /* Info.plist */,
+				875D4D4E27A3B78A00B09175 /* SignupBO.swift */,
 			);
 			path = "NEAR Learning";
 			sourceTree = "<group>";
@@ -352,12 +362,17 @@
 				48F5F11C2748012B00DCF0FD /* Sources */,
 				48F5F11D2748012B00DCF0FD /* Frameworks */,
 				48F5F11E2748012B00DCF0FD /* Resources */,
+				875D4D4D27A3B58700B09175 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "NEAR Learning";
+			packageProductDependencies = (
+				875D4D4927A3B47400B09175 /* FirebaseAuth */,
+				875D4D4B27A3B47400B09175 /* FirebaseCrashlytics */,
+			);
 			productName = "NEAR Learning";
 			productReference = 48F5F1202748012B00DCF0FD /* NEAR Learning.app */;
 			productType = "com.apple.product-type.application";
@@ -430,6 +445,9 @@
 				Base,
 			);
 			mainGroup = 48F5F1172748012B00DCF0FD;
+			packageReferences = (
+				875D4D4827A3B47400B09175 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 48F5F1212748012B00DCF0FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -453,6 +471,7 @@
 				481EA9302759DCE6007678A3 /* TestViewController.xib in Resources */,
 				4808886F2752729700BD0EED /* CoursesCell.xib in Resources */,
 				481EA9342759DCFD007678A3 /* LessonViewController.xib in Resources */,
+				875D4D4727A3B34600B09175 /* GoogleService-Info.plist in Resources */,
 				48F5F12D2748012F00DCF0FD /* Assets.xcassets in Resources */,
 				48F5F12B2748012B00DCF0FD /* Main.storyboard in Resources */,
 				481EA9382759DD0E007678A3 /* SnippetViewController.xib in Resources */,
@@ -479,6 +498,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		875D4D4D27A3B58700B09175 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		48F5F11C2748012B00DCF0FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -488,6 +528,7 @@
 				48F5F16D2748410B00DCF0FD /* LoginPresenter.swift in Sources */,
 				48F5F162274807DD00DCF0FD /* SignUpViewController.swift in Sources */,
 				48F5F1712748609100DCF0FD /* RecoveryAccountViewController.swift in Sources */,
+				875D4D4F27A3B78A00B09175 /* SignupBO.swift in Sources */,
 				48F5F16B274838BD00DCF0FD /* UITextField+Action.swift in Sources */,
 				4808886E2752729700BD0EED /* CoursesCell.swift in Sources */,
 				48F5F1242748012B00DCF0FD /* AppDelegate.swift in Sources */,
@@ -683,7 +724,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6PU58N93KN;
+				DEVELOPMENT_TEAM = FW5Z9GGJ86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -697,7 +738,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.isaacr.NEAR-Learning";
+				PRODUCT_BUNDLE_IDENTIFIER = org.near.education;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -712,7 +753,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6PU58N93KN;
+				DEVELOPMENT_TEAM = FW5Z9GGJ86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -726,7 +767,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.isaacr.NEAR-Learning";
+				PRODUCT_BUNDLE_IDENTIFIER = org.near.education;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -870,6 +911,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		875D4D4827A3B47400B09175 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		875D4D4927A3B47400B09175 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 875D4D4827A3B47400B09175 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		875D4D4B27A3B47400B09175 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 875D4D4827A3B47400B09175 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48F5F1182748012B00DCF0FD /* Project object */;
 }
