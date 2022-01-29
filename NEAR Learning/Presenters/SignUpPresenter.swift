@@ -9,6 +9,7 @@ import Foundation
 
 protocol SignUpPresenterView: AnyObject {
   func signUp()
+  func error(value: String)
 }
 
 class SignUpPresenter {
@@ -18,10 +19,11 @@ class SignUpPresenter {
   }
   
   func signUpAction(name: String, email: String, password: String) {
-      let signupBO = SignupBO()
-      signupBO.signup(email: email, password:password){[weak self]result in
-          self?.view?.signUp()
-      }
-    
+    let signupBO = SignupBO()
+    signupBO.signup(email: email, password: password, onSuccess: {
+      self.view?.signUp()
+    },onFailure: { error in
+      self.view?.error(value: error)
+    })
   }
 }

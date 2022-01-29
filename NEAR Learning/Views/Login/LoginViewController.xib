@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="checkImage" destination="Gw2-aP-1hR" id="Qr5-rD-u25"/>
                 <outlet property="stkRecover" destination="ysV-Mk-7iS" id="QKX-OS-72m"/>
+                <outlet property="textFieldEmail" destination="93b-Z5-O1h" id="eiR-Ce-BYa"/>
                 <outlet property="textFieldPassword" destination="D1n-2B-Eqg" id="3Yg-Sl-kIM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,7 +33,10 @@
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93b-Z5-O1h">
                                     <rect key="frame" x="15" y="16" width="344" height="18.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="68o-qx-UIx"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" name="LoginTextColor"/>
@@ -49,7 +53,10 @@
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D1n-2B-Eqg">
                                     <rect key="frame" x="15" y="16.5" width="344" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Ucp-Oa-2RC"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" name="LoginTextColor"/>

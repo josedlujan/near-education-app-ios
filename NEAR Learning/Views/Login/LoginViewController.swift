@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+  @IBOutlet weak var textFieldEmail: UITextField!
   @IBOutlet weak var textFieldPassword: UITextField!
   @IBOutlet weak var checkImage: UIImageView!
   @IBOutlet weak var stkRecover: UIStackView!
@@ -37,8 +38,12 @@ class LoginViewController: UIViewController {
     }
   }
   
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    view.endEditing(true)
+  }
+  
   @IBAction func loginAction(_ sender: UIButton) {
-    presenter.loginAction(email: "", password: "")
+    presenter.loginAction(email: textFieldEmail.text!, password: textFieldPassword.text!)
   }
   @IBAction func recoverAccount(_ sender: UIButton) {
     presenter.recoveryAccountAction()
@@ -48,8 +53,23 @@ class LoginViewController: UIViewController {
   }
 }
 
+extension LoginViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if textField == textFieldEmail {
+      textFieldPassword.becomeFirstResponder()
+    } else if textField == textFieldPassword {
+      textFieldPassword.resignFirstResponder()
+    }
+    return true
+  }
+}
+
 
 extension LoginViewController: LoginPresenterView {
+  func error(value: String) {
+    alert("Error", message: value, dismiss: "Aceptar")
+  }
+  
   func login() {
     let notification = NotificationCenter.default
     notification.post(name: Notification.Name(rawValue: "successfullyLogin"),
