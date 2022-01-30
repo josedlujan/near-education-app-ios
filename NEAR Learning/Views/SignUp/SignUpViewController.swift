@@ -29,10 +29,35 @@ class SignUpViewController: UIViewController {
   @IBAction func signUpAction(_ sender: UIButton) {
       presenter.signUpAction(name:textFieldName.text!, email:textFieldEmail.text!, password: textFieldPassword.text!)
   }
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    view.endEditing(true)
+  }
 }
 
+extension SignUpViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if textField == textFieldName {
+      textFieldEmail.becomeFirstResponder()
+    } else if textField == textFieldEmail {
+      textFieldPassword.becomeFirstResponder()
+    } else if textField == textFieldPassword {
+      textFieldPassword.resignFirstResponder()
+    }
+    return true
+  }
+}
+
+
 extension SignUpViewController: SignUpPresenterView {
+  func error(value: String) {
+    alert("Error", message: value, dismiss: "Aceptar")
+  }
+  
   func signUp() {
-    // implement code
+    self.view.endEditing(true)
+    let notification = NotificationCenter.default
+    notification.post(name: Notification.Name(rawValue: "successfullyLogin"),
+    object: nil,
+    userInfo: nil)
   }
 }

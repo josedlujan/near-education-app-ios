@@ -11,6 +11,7 @@ protocol LoginPresenterView: AnyObject {
   func login()
   func recoverAccount()
   func signUp()
+  func error(value: String)
 }
 
 class LoginPresenter {
@@ -20,7 +21,13 @@ class LoginPresenter {
   }
   
   func loginAction(email: String,password: String){
-    view?.login()
+    let signupBO = SignupBO()
+    signupBO.signIn(email: email, password: password, onSuccess: {
+      self.view?.login()
+    }, onFailure: { error in
+      self.view?.error(value: error)
+    })
+    
   }
   func recoveryAccountAction(){
     view?.recoverAccount()
