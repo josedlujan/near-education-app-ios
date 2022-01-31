@@ -7,25 +7,26 @@
 
 import Foundation
 protocol NewsPresenterView:AnyObject{
-    func allNews(news:[NewsItem])
-    func showMessage(message:String)
+  func showMessage(message:String)
 }
 
 class NewsPresenter{
-    weak var view: NewsPresenterView?
-    init(with view: NewsPresenterView) {
-      self.view = view
+  weak var view: NewsPresenterView?
+  var news: [NewsItem] = []
+  init(with view: NewsPresenterView) {
+    self.view = view
+  }
+  
+  func allNewsAction(onSuccess: @escaping() -> Void){
+    let newsBO = NewsBO()
+    newsBO.getAllNews{[weak self] news,isError in
+      if !isError{
+        self?.news = news
+        onSuccess()
+      }
+      else{
+        self?.view?.showMessage(message: "No se pudieron obtener las ultimas noticias")
+      }
     }
-    func allNewsAction(){
-        let newsBO = NewsBO()
-        newsBO.getAllNews{[weak self] news,isError in
-            if !isError{
-                self?.view?.allNews(news:news)
-            }
-            else{
-                self?.view?.showMessage(message: "No se pudieron obtener las ultimas noticias")
-            }
-        }
-    }
-    
+  }
 }
