@@ -10,7 +10,7 @@ import UIKit
 class CoursesCell: UITableViewCell {
   @IBOutlet weak var containerView: UIView!
   
-    override func awakeFromNib() {
+  override func awakeFromNib() {
         super.awakeFromNib()
         self.containerView.shadow()
         // Initialization code
