@@ -13,13 +13,14 @@ protocol NewsPresenterView:AnyObject{
 class NewsPresenter{
   weak var view: NewsPresenterView?
   var news: [NewsItem] = []
-  init(with view: NewsPresenterView) {
+  let newsBO:NewsBO!
+    init(with view: NewsPresenterView,newsBO:NewsBO) {
     self.view = view
+    self.newsBO = newsBO
   }
   
   func allNewsAction(onSuccess: @escaping() -> Void){
-    let newsBO = NewsBO()
-    newsBO.getAllNews{[weak self] news,isError in
+    self.newsBO.getAllNews{[weak self] news,isError in
       if !isError{
         self?.news = news
         onSuccess()
@@ -28,5 +29,6 @@ class NewsPresenter{
         self?.view?.showMessage(message: "No se pudieron obtener las ultimas noticias")
       }
     }
+      self.newsBO.getAllQuestions()
   }
 }

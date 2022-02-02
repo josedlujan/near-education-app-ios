@@ -47,5 +47,6 @@ class NewsBO{
         }
      callback(news,false)
     }
-    }
+  }
+    
 }

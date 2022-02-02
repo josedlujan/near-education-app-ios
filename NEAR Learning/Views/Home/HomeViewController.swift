@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-  lazy var presenter = NewsPresenter(with: self)
+  lazy var presenter = NewsPresenter(with: self,newsBO: NewsBO())
   
   @IBOutlet weak var tableView: UITableView!
   
