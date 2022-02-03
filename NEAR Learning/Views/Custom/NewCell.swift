@@ -17,7 +17,9 @@ class NewCell: UITableViewCell {
   
   override func awakeFromNib() {
         super.awakeFromNib()
-    containerView.shadowAndRound(radius: 20)
+    //containerView.shadowAndRound(radius: 20)
+    //containerView.roundConers(radius: 20, corner: .allCorners)
+    containerView.setShadow()
     newImage.roundConers(radius: 20, corner: .allCorners)
         // Initialization code
     }
