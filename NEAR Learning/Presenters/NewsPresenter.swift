@@ -29,6 +29,6 @@ class NewsPresenter{
         self?.view?.showMessage(message: "No se pudieron obtener las ultimas noticias")
       }
     }
-      self.newsBO.getAllQuestions()
+      //self.newsBO.getAllQuestions()
   }
 }
