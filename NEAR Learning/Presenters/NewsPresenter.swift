@@ -13,10 +13,9 @@ protocol NewsPresenterView:AnyObject{
 class NewsPresenter{
   weak var view: NewsPresenterView?
   var news: [NewsItem] = []
-  let newsBO:NewsBO!
-    init(with view: NewsPresenterView,newsBO:NewsBO) {
+    let newsBO:NewsBO = NewsBO(firebaseService: FirebaseService.shared)
+    init(with view: NewsPresenterView) {
     self.view = view
-    self.newsBO = newsBO
   }
   
   func allNewsAction(onSuccess: @escaping() -> Void){
@@ -29,6 +28,18 @@ class NewsPresenter{
         self?.view?.showMessage(message: "No se pudieron obtener las ultimas noticias")
       }
     }
-      //self.newsBO.getAllQuestions()
   }
+    
+     //Mark : TODO Remover cuando no se use
+    func test(){
+        let questionBO = QuestionBO(firebaseService: FirebaseService.shared)
+        questionBO.getQuestionsByCategory(idCategory: "1SdLBR6NtVV9C4qQAOnS"){[weak self]questions,isError in
+            if !isError{
+                debugPrint("Estas son las preguntas: \(questions)")
+            }
+            else{
+                self?.view?.showMessage(message: "No se pudieron obtener las preguntas")
+            }
+        }
+    }
 }

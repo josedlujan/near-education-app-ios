@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    lazy var presenter = NewsPresenter(with: self,newsBO: NewsBO(firebaseService: FirebaseService.shared))
+    lazy var presenter = NewsPresenter(with: self)
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     presenter.allNewsAction {
       self.tableView.reloadData()
     }
+    //presenter.test()
   }
 }
 
