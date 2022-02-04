@@ -49,6 +49,15 @@
 		6A187F5C27A7914700AD5CA5 /* NewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A187F5A27A7914700AD5CA5 /* NewCell.swift */; };
 		6A187F5D27A7914700AD5CA5 /* NewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A187F5B27A7914700AD5CA5 /* NewCell.xib */; };
 		6AB9B0F727A50FA800F238CF /* ViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9B0F627A50FA800F238CF /* ViewController+Action.swift */; };
+		873F00A527ACBD02003B1627 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A427ACBD02003B1627 /* FirebaseService.swift */; };
+		873F00A727ACC5A2003B1627 /* QuestionBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A627ACC5A2003B1627 /* QuestionBO.swift */; };
+		873F00A927ACC5D2003B1627 /* CategoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A827ACC5D2003B1627 /* CategoryItemModel.swift */; };
+		873F00AB27ACC913003B1627 /* LevelItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00AA27ACC913003B1627 /* LevelItemModel.swift */; };
+		873F00AD27ACD1BB003B1627 /* QuestionItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00AC27ACD1BB003B1627 /* QuestionItemModel.swift */; };
+		873F00AF27ACD668003B1627 /* SnippetItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00AE27ACD668003B1627 /* SnippetItemModel.swift */; };
+		873F00B127ACD810003B1627 /* LessonItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00B027ACD810003B1627 /* LessonItemModel.swift */; };
+		873F00B327ACDCBF003B1627 /* SnnipetsBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00B227ACDCBF003B1627 /* SnnipetsBO.swift */; };
+		873F00B527ACDEAD003B1627 /* LessonBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00B427ACDEAD003B1627 /* LessonBO.swift */; };
 		875D4D4727A3B34600B09175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 875D4D4627A3B34600B09175 /* GoogleService-Info.plist */; };
 		876A6AED27A61E4500F0F096 /* NewsBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876A6AEC27A61E4500F0F096 /* NewsBO.swift */; };
 		876A6AF027A6212400F0F096 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 876A6AEF27A6212400F0F096 /* FirebaseAuth */; };
@@ -124,6 +133,15 @@
 		6A187F5A27A7914700AD5CA5 /* NewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCell.swift; sourceTree = "<group>"; };
 		6A187F5B27A7914700AD5CA5 /* NewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCell.xib; sourceTree = "<group>"; };
 		6AB9B0F627A50FA800F238CF /* ViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Action.swift"; sourceTree = "<group>"; };
+		873F00A427ACBD02003B1627 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		873F00A627ACC5A2003B1627 /* QuestionBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionBO.swift; path = "NEAR Learning/BO/QuestionBO.swift"; sourceTree = SOURCE_ROOT; };
+		873F00A827ACC5D2003B1627 /* CategoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemModel.swift; sourceTree = "<group>"; };
+		873F00AA27ACC913003B1627 /* LevelItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelItemModel.swift; sourceTree = "<group>"; };
+		873F00AC27ACD1BB003B1627 /* QuestionItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItemModel.swift; sourceTree = "<group>"; };
+		873F00AE27ACD668003B1627 /* SnippetItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetItemModel.swift; sourceTree = "<group>"; };
+		873F00B027ACD810003B1627 /* LessonItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonItemModel.swift; sourceTree = "<group>"; };
+		873F00B227ACDCBF003B1627 /* SnnipetsBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SnnipetsBO.swift; path = "NEAR Learning/BO/SnnipetsBO.swift"; sourceTree = SOURCE_ROOT; };
+		873F00B427ACDEAD003B1627 /* LessonBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LessonBO.swift; path = "NEAR Learning/BO/LessonBO.swift"; sourceTree = SOURCE_ROOT; };
 		875D4D4627A3B34600B09175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		876A6AEC27A61E4500F0F096 /* NewsBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsBO.swift; path = "NEAR Learning/BO/NewsBO.swift"; sourceTree = SOURCE_ROOT; };
 		876A6AFA27A6251200F0F096 /* NewsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemModel.swift; sourceTree = "<group>"; };
@@ -247,6 +265,7 @@
 				48F5F169274838A500DCF0FD /* Extensions */,
 				48F5F156274805FF00DCF0FD /* Delegate */,
 				48F5F1552748025D00DCF0FD /* Presenters */,
+				873F00A327ACBCDC003B1627 /* Service */,
 				48F5F1542748025300DCF0FD /* Views */,
 				876A6AF927A6245600F0F096 /* Models */,
 				8779225F27A3BDB200B41B91 /* BO */,
@@ -369,10 +388,23 @@
 			path = RecoveryAccount;
 			sourceTree = "<group>";
 		};
+		873F00A327ACBCDC003B1627 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				873F00A427ACBD02003B1627 /* FirebaseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		876A6AF927A6245600F0F096 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				876A6AFA27A6251200F0F096 /* NewsItemModel.swift */,
+				873F00A827ACC5D2003B1627 /* CategoryItemModel.swift */,
+				873F00AA27ACC913003B1627 /* LevelItemModel.swift */,
+				873F00AC27ACD1BB003B1627 /* QuestionItemModel.swift */,
+				873F00AE27ACD668003B1627 /* SnippetItemModel.swift */,
+				873F00B027ACD810003B1627 /* LessonItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -382,6 +414,9 @@
 			children = (
 				8779226027A3BE5600B41B91 /* SignupBO.swift */,
 				876A6AEC27A61E4500F0F096 /* NewsBO.swift */,
+				873F00A627ACC5A2003B1627 /* QuestionBO.swift */,
+				873F00B227ACDCBF003B1627 /* SnnipetsBO.swift */,
+				873F00B427ACDEAD003B1627 /* LessonBO.swift */,
 			);
 			name = BO;
 			path = "New Group";
@@ -571,22 +606,31 @@
 				876A6AFB27A6251200F0F096 /* NewsItemModel.swift in Sources */,
 				48F5F1712748609100DCF0FD /* RecoveryAccountViewController.swift in Sources */,
 				8779226127A3BE5600B41B91 /* SignupBO.swift in Sources */,
+				873F00AF27ACD668003B1627 /* SnippetItemModel.swift in Sources */,
 				48F5F16B274838BD00DCF0FD /* UITextField+Action.swift in Sources */,
 				4808886E2752729700BD0EED /* CoursesCell.swift in Sources */,
 				48F5F1242748012B00DCF0FD /* AppDelegate.swift in Sources */,
 				48DAB5F0276574E600EA891F /* LessonCell.swift in Sources */,
+				873F00AD27ACD1BB003B1627 /* QuestionItemModel.swift in Sources */,
 				876A6AED27A61E4500F0F096 /* NewsBO.swift in Sources */,
+				873F00A727ACC5A2003B1627 /* QuestionBO.swift in Sources */,
 				48F5F17827486A3300DCF0FD /* RecoveryAccountPresenter.swift in Sources */,
 				48F5F1592748071000DCF0FD /* RootViewController.swift in Sources */,
 				481EA9332759DCFD007678A3 /* LessonViewController.swift in Sources */,
 				48F5F15D2748077700DCF0FD /* LoginViewController.swift in Sources */,
+				873F00B527ACDEAD003B1627 /* LessonBO.swift in Sources */,
+				873F00B327ACDCBF003B1627 /* SnnipetsBO.swift in Sources */,
+				873F00B127ACD810003B1627 /* LessonItemModel.swift in Sources */,
 				48F5F167274809C800DCF0FD /* HomeViewController.swift in Sources */,
 				481EA93B2759DD1B007678A3 /* PathViewController.swift in Sources */,
+				873F00A927ACC5D2003B1627 /* CategoryItemModel.swift in Sources */,
 				481EA9372759DD0E007678A3 /* SnippetViewController.swift in Sources */,
+				873F00A527ACBD02003B1627 /* FirebaseService.swift in Sources */,
 				481EA92F2759DCE6007678A3 /* TestViewController.swift in Sources */,
 				48F5F1262748012B00DCF0FD /* SceneDelegate.swift in Sources */,
 				6AB9B0F727A50FA800F238CF /* ViewController+Action.swift in Sources */,
 				4808886A27526A1E00BD0EED /* TabBarViewController.swift in Sources */,
+				873F00AB27ACC913003B1627 /* LevelItemModel.swift in Sources */,
 				48F5F176274864DA00DCF0FD /* SignUpPresenter.swift in Sources */,
 				876A6AFD27A62DE500F0F096 /* NewsPresenter.swift in Sources */,
 				48F5F174274864A400DCF0FD /* UINavigationController+Action.swift in Sources */,
@@ -770,7 +814,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6PU58N93KN;
+				DEVELOPMENT_TEAM = FW5Z9GGJ86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -799,7 +843,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6PU58N93KN;
+				DEVELOPMENT_TEAM = FW5Z9GGJ86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

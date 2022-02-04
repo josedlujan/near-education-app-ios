@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-  lazy var presenter = NewsPresenter(with: self,newsBO: NewsBO())
+    lazy var presenter = NewsPresenter(with: self,newsBO: NewsBO(firebaseService: FirebaseService.shared))
   
   @IBOutlet weak var tableView: UITableView!
   

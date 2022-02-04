@@ -6,22 +6,15 @@
 //
 
 import Foundation
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 class NewsBO{
-    var db: Firestore!
-    // [START setup]
-    let settings = FirestoreSettings()
-    init() {
-        Firestore.firestore().settings = settings
-        // [END setup]
-        db = Firestore.firestore()
+    let firebaseService:FirebaseService!
+    init(firebaseService:FirebaseService) {
+        self.firebaseService = firebaseService
     }
     
     func getAllNews(callback:@escaping([NewsItem],Bool)->Void){
-    db.collection("news").getDocuments(){(querySnapshot,err) in
+        self.firebaseService.db.collection("news").getDocuments(){(querySnapshot,err) in
         var news:[NewsItem] = []
         if let error = err{
             debugPrint("error al consultar las noticias \(error)")
@@ -48,5 +41,4 @@ class NewsBO{
      callback(news,false)
     }
   }
-    
 }
