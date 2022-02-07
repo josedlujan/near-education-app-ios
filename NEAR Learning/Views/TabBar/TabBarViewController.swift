@@ -44,6 +44,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     navigationController.view.frame = view.bounds
     navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     navigationController.navigationBar.topItem?.title = ""
+    navigationController.navigationBar.tintColor = .white
     navigationController.navigationBar.barTintColor = UIColor(named: "GeneralColor")
     navigationController.tabBarItem = UITabBarItem()
     navigationController.tabBarItem.title = title

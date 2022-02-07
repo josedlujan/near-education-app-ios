@@ -12,6 +12,7 @@ protocol LoginPresenterView: AnyObject {
   func recoverAccount()
   func signUp()
   func error(value: String)
+  func indcatorView(animating: Bool)
 }
 
 class LoginPresenter {
@@ -23,8 +24,10 @@ class LoginPresenter {
   func loginAction(email: String,password: String){
     let signupBO = SignupBO()
     signupBO.signIn(email: email, password: password, onSuccess: {
+      self.view?.indcatorView(animating: false)
       self.view?.login()
     }, onFailure: { error in
+      self.view?.indcatorView(animating: false)
       self.view?.error(value: error)
     })
     
@@ -35,5 +38,9 @@ class LoginPresenter {
   
   func signUpAction(){
     view?.signUp()
+  }
+  
+  func indicatorView(present: Bool){
+    view?.indcatorView(animating: present)
   }
 }

@@ -33,7 +33,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rust" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6Z-Qc-41K">
                                         <rect key="frame" x="0.0" y="0.0" width="39.5" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" name="GeneralColor"/>
+                                        <color key="textColor" name="ColorTextPurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programin languaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqp-Mx-JQj">
@@ -75,13 +75,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="tG3-Tw-kHd"/>
             <color key="backgroundColor" name="NewContainerColor"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="Lqp-Mx-JQj" id="EYQ-fD-0cx"/>
+                <outlet property="titleLabel" destination="w6Z-Qc-41K" id="4lY-Za-bEu"/>
+            </connections>
             <point key="canvasLocation" x="138" y="-6"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="icnLesson" width="40" height="40"/>
-        <namedColor name="GeneralColor">
+        <namedColor name="ColorTextPurple">
             <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NewContainerColor">

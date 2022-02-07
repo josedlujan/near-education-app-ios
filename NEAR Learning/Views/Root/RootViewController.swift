@@ -15,8 +15,11 @@ class RootViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupAuthNotification()
-    //showHomeScreen()
-    showLoginScreen()
+    if Session.hasSession() {
+      showHomeScreen()
+    } else {
+      showLoginScreen()
+    }
   }
 
   func setupAuthNotification() {

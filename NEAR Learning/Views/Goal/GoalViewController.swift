@@ -1,39 +1,37 @@
 //
-//  TestViewController.swift
+//  GoalViewController.swift
 //  NEAR Learning
 //
-//  Created by Josue Hernandez on 02/12/21.
+//  Created by Isaac R on 05/02/22.
 //
 
 import UIKit
 import NVActivityIndicatorView
 
-class TestViewController: UIViewController {
+class GoalViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
-  lazy var presenter = TestPresenter(with: self)
+  var idCategory: String = ""
+  lazy var presenter = GoalPresenter(with: self)
   private var activityIndicator: NVActivityIndicatorView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
-    testCallback()
-    // Do any additional setup after loading the view.
+    goalCallback()
   }
   
   private func setupUI(){
-    tableView.register(UINib(nibName: "TestCell", bundle: nil), forCellReuseIdentifier: "TestCell")
-    title = "Test"
+    tableView.register(UINib(nibName: "LevelCell", bundle: nil), forCellReuseIdentifier: "LevelCell")
+    title = "Goal"
     setupActivityIndicator()
   }
-  
   private func setupActivityIndicator(){
     activityIndicator = activityIndicator()
     view.addSubview(activityIndicator)
   }
   
-  private func testCallback(){
-    presenter.indicatorView(present: true)
-    presenter.getAllTest {
+  private func goalCallback() {
+    presenter.getLevel(idCategory: idCategory) {
       self.presenter.indicatorView(present: false)
       self.tableView.reloadData()
     }
@@ -41,38 +39,33 @@ class TestViewController: UIViewController {
   
 }
 
-extension TestViewController: UITableViewDataSource, UITableViewDelegate {
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
+extension GoalViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return presenter.categories.count
+    return presenter.levels.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath) as? TestCell else {
-      fatalError("")
-    }
-    let category = presenter.categories[indexPath.row]
-    cell.bindWithCategory(category: category)
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "LevelCell", for: indexPath) as? LevelCell else {fatalError("")}
+    let level = presenter.levels[indexPath.row]
+    cell.bindWithLevel(level: level)
     return cell
   }
+  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     let screen = UIScreen.main.bounds
-    return screen.height * 0.15
+    return screen.height * 0.13
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let category = presenter.categories[indexPath.row]
-    let goalVC = GoalViewController()
-    goalVC.idCategory = category.id
-    navigationItem.backButtonTitle = ""
-    navigationController?.pushViewController(goalVC, animated: true)
+    let questionVC = QuestionViewController()
+    let level = presenter.levels[indexPath.row]
+    questionVC.idCategory = level.idCategory
+    navigationController?.pushViewController(questionVC, animated: true)
   }
 }
 
-extension TestViewController: TestPresenterView {
+
+extension GoalViewController: GoalPresenterView {
   func showMessage(message: String) {
     debugPrint(message)
   }

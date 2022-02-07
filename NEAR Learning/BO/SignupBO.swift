@@ -24,9 +24,10 @@ class SignupBO {
   
   func signIn(email: String, password: String, onSuccess: @escaping() -> Void,
               onFailure: @escaping(_ error: String) -> Void) {
-    Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+    Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
       if error == nil {
-        debugPrint(authResult?.user.uid, " Uid")
+        guard let result = authResult else {return}
+        Session.create(token: result.user.uid)
         onSuccess()
       } else{
         guard let errorLocalized = error else {return}

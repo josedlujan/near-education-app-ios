@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class HomeViewController: UIViewController {
-    lazy var presenter = NewsPresenter(with: self)
-  
   @IBOutlet weak var tableView: UITableView!
+  //lazy var presenter = NewsPresenter(with: self,newsBO: NewsBO(firebaseService: FirebaseService.shared))
+  lazy var presenter = NewsPresenter(with: self)
+  private var activityIndicator: NVActivityIndicatorView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,13 +24,20 @@ class HomeViewController: UIViewController {
   private func setupUI(){
     tableView.register(UINib(nibName: "NewCell", bundle: nil), forCellReuseIdentifier: "NewCell")
     title = "Inicio"
+    setupActivityIndicator()
+  }
+  
+  private func setupActivityIndicator(){
+    activityIndicator = activityIndicator()
+    view.addSubview(activityIndicator)
   }
   
   private func newsCallback(){
+    presenter.indicatorView(present: true)
     presenter.allNewsAction {
+      self.presenter.indicatorView(present: false)
       self.tableView.reloadData()
     }
-    //presenter.test()
   }
 }
 
@@ -55,6 +64,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension HomeViewController: NewsPresenterView {
+  func indcatorView(animating: Bool) {
+    switch animating{
+    case true:
+      activityIndicator.startAnimating()
+    case false:
+      activityIndicator.stopAnimating()
+    }
+  }
+  
   func showMessage(message: String) {
     debugPrint(message)
   }
