@@ -54,13 +54,20 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewCell", for: indexPath) as? NewCell else {fatalError("")}
     let new = presenter.news[indexPath.row]
     cell.bindWithNew(new: new)
-    debugPrint(new)
     return cell
   }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     let screen = UIScreen.main.bounds
     return screen.height * 0.2
   }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentNews = presenter.news[indexPath.row]
+        guard let link =  currentNews.link else{
+            return
+        }
+        let urlOpen = URL(string: link)
+        openSafariVC(url: urlOpen!)
+    }
 }
 
 extension HomeViewController: NewsPresenterView {

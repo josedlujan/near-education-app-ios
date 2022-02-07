@@ -7,7 +7,7 @@
 
 import UIKit
 import NVActivityIndicatorView
-
+import SafariServices
 extension UIViewController {
   func alert(_ title: String, message: String, dismiss: String) {
     let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -26,4 +26,8 @@ extension UIViewController {
                                                     padding: 2)
     return activityIndicator
   }
+    func openSafariVC(url:URL){
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true, completion: nil)
+    }
 }
