@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LevelCell" id="nem-lV-H01" customClass="LevelCell" customModule="NEAR_Learning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nem-lV-H01" id="a8N-Oo-cU9">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oP-Ys-yE6">
+                        <rect key="frame" x="8" y="10" width="304" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnGoal" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-hX-3BN">
+                                <rect key="frame" x="0.0" y="4" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RnS-hX-3BN" secondAttribute="height" multiplier="1:1" id="M7I-25-dWQ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="keE-K3-0w3">
+                                <rect key="frame" x="82" y="20.5" width="181" height="39.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rust" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-vA-T8b">
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="ColorTextPurple"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programin languaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0z-qO-4Fl">
+                                        <rect key="frame" x="0.0" y="21.5" width="132" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-cf-BTE">
+                                <rect key="frame" x="273" y="34" width="16" height="12.5"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J6n-cf-BTE" secondAttribute="height" multiplier="1:1" id="hMy-hc-5od"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="NewContainerColor"/>
+                        <constraints>
+                            <constraint firstItem="RnS-hX-3BN" firstAttribute="height" secondItem="9oP-Ys-yE6" secondAttribute="height" multiplier="0.9" id="2SX-6A-mCP"/>
+                            <constraint firstItem="J6n-cf-BTE" firstAttribute="leading" secondItem="keE-K3-0w3" secondAttribute="trailing" constant="10" id="6K5-Yy-2k7"/>
+                            <constraint firstItem="RnS-hX-3BN" firstAttribute="centerY" secondItem="9oP-Ys-yE6" secondAttribute="centerY" id="CQf-nc-Ogc"/>
+                            <constraint firstItem="RnS-hX-3BN" firstAttribute="leading" secondItem="9oP-Ys-yE6" secondAttribute="leading" id="IUQ-DI-LX5"/>
+                            <constraint firstItem="keE-K3-0w3" firstAttribute="centerY" secondItem="9oP-Ys-yE6" secondAttribute="centerY" id="gSi-g4-axs"/>
+                            <constraint firstItem="J6n-cf-BTE" firstAttribute="centerY" secondItem="9oP-Ys-yE6" secondAttribute="centerY" id="gtY-Y3-uxd"/>
+                            <constraint firstItem="J6n-cf-BTE" firstAttribute="height" secondItem="9oP-Ys-yE6" secondAttribute="height" multiplier="0.2" id="lvV-Yi-01D"/>
+                            <constraint firstItem="keE-K3-0w3" firstAttribute="leading" secondItem="RnS-hX-3BN" secondAttribute="trailing" constant="10" id="tqs-w2-hpw"/>
+                            <constraint firstAttribute="trailing" secondItem="J6n-cf-BTE" secondAttribute="trailing" constant="15" id="vO8-To-tFA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9oP-Ys-yE6" firstAttribute="centerY" secondItem="a8N-Oo-cU9" secondAttribute="centerY" id="HPN-FO-Zut"/>
+                    <constraint firstItem="9oP-Ys-yE6" firstAttribute="height" secondItem="a8N-Oo-cU9" secondAttribute="height" multiplier="0.8" id="Kaa-9q-4Yk"/>
+                    <constraint firstItem="9oP-Ys-yE6" firstAttribute="width" secondItem="a8N-Oo-cU9" secondAttribute="width" multiplier="0.95" id="gN7-Nr-Ooi"/>
+                    <constraint firstItem="9oP-Ys-yE6" firstAttribute="centerX" secondItem="a8N-Oo-cU9" secondAttribute="centerX" id="hzX-E3-2yK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="LpQ-oz-fY1"/>
+            <color key="backgroundColor" name="NewContainerColor"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="c0z-qO-4Fl" id="lBv-57-iNX"/>
+                <outlet property="titleLabel" destination="Bci-vA-T8b" id="57P-dL-KJt"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="-6"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="icnGoal" width="40" height="40"/>
+        <namedColor name="ColorTextPurple">
+            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NewContainerColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
