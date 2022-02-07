@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class LoginViewController: UIViewController {
   @IBOutlet weak var textFieldEmail: UITextField!
@@ -14,14 +15,21 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var stkRecover: UIStackView!
   lazy var presenter = LoginPresenter(with: self)
   private var isEnable: Bool = false
+  private var activityIndicator: NVActivityIndicatorView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     textFieldPassword.enablePasswordToggle()
     setupRecoverAccount()
+    setupActivityIndicator()
     textFieldEmail.text = "isaac@gmail.com"
     textFieldPassword.text = "1234qwer"
     // Do any additional setup after loading the view.
+  }
+  
+  private func setupActivityIndicator(){
+    activityIndicator = activityIndicator()
+    view.addSubview(activityIndicator)
   }
   
   private func setupRecoverAccount(){
@@ -51,6 +59,7 @@ class LoginViewController: UIViewController {
     presenter.recoveryAccountAction()
   }
   @IBAction func signUpAction(_ sender: UIButton) {
+    presenter.indicatorView(present: true)
     presenter.signUpAction()
   }
 }
@@ -86,6 +95,15 @@ extension LoginViewController: LoginPresenterView {
   func signUp() {
     let signUpViewController = SignUpViewController()
     navigationController?.pushViewController(signUpViewController, animated: true)
+  }
+  
+  func indcatorView(animating: Bool) {
+    switch animating{
+    case true:
+      activityIndicator.startAnimating()
+    case false:
+      activityIndicator.stopAnimating()
+    }
   }
   
 }

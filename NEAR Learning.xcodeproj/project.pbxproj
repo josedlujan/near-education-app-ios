@@ -48,7 +48,28 @@
 		6A187F5927A78E9800AD5CA5 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6A187F5827A78E9800AD5CA5 /* AlamofireImage */; };
 		6A187F5C27A7914700AD5CA5 /* NewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A187F5A27A7914700AD5CA5 /* NewCell.swift */; };
 		6A187F5D27A7914700AD5CA5 /* NewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A187F5B27A7914700AD5CA5 /* NewCell.xib */; };
+		6A1B5FD027AEA15100B56400 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1B5FCE27AEA15100B56400 /* QuestionCell.swift */; };
+		6A1B5FD127AEA15100B56400 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1B5FCF27AEA15100B56400 /* QuestionCell.xib */; };
+		6A1B5FD327AEA25900B56400 /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1B5FD227AEA25900B56400 /* QuestionPresenter.swift */; };
+		6A37CD1827AE6D2F0093AF8D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37CD1727AE6D2F0093AF8D /* Store.swift */; };
+		6A37CD1A27AE6E020093AF8D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37CD1927AE6E020093AF8D /* Session.swift */; };
+		6A37CD1C27AE73540093AF8D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37CD1B27AE73540093AF8D /* TestPresenter.swift */; };
+		6A37CD1F27AE7FAF0093AF8D /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37CD1D27AE7FAF0093AF8D /* LevelCell.swift */; };
+		6A37CD2027AE7FAF0093AF8D /* LevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A37CD1E27AE7FAF0093AF8D /* LevelCell.xib */; };
+		6A37CD2427AE82530093AF8D /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37CD2227AE82530093AF8D /* GoalViewController.swift */; };
+		6A37CD2527AE82530093AF8D /* GoalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A37CD2327AE82530093AF8D /* GoalViewController.xib */; };
+		6A37CD2727AE91950093AF8D /* GoalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37CD2627AE91950093AF8D /* GoalPresenter.swift */; };
+		6A37CD2B27AE9E9A0093AF8D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37CD2927AE9E9A0093AF8D /* QuestionViewController.swift */; };
+		6A37CD2C27AE9E9A0093AF8D /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A37CD2A27AE9E9A0093AF8D /* QuestionViewController.xib */; };
+		6A62B92B27AE309B00A34A89 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A62B92927AE309B00A34A89 /* AnswerCell.swift */; };
+		6A62B92C27AE309B00A34A89 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62B92A27AE309B00A34A89 /* AnswerCell.xib */; };
+		6A62B92F27AE32D600A34A89 /* SelectedAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A62B92D27AE32D600A34A89 /* SelectedAnswerCell.swift */; };
+		6A62B93027AE32D600A34A89 /* SelectedAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62B92E27AE32D600A34A89 /* SelectedAnswerCell.xib */; };
 		6AB9B0F727A50FA800F238CF /* ViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9B0F627A50FA800F238CF /* ViewController+Action.swift */; };
+		6AD0D1C927ACEEAD008B5D3F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1C827ACEEAD008B5D3F /* Realm */; };
+		6AD0D1CB27ACEEAD008B5D3F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1CA27ACEEAD008B5D3F /* RealmSwift */; };
+		6AD0D1CE27AD9E3B008B5D3F /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1CD27AD9E3B008B5D3F /* NVActivityIndicatorView */; };
+		6AD0D1D027AD9E3B008B5D3F /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1CF27AD9E3B008B5D3F /* NVActivityIndicatorViewExtended */; };
 		873F00A527ACBD02003B1627 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A427ACBD02003B1627 /* FirebaseService.swift */; };
 		873F00A727ACC5A2003B1627 /* QuestionBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A627ACC5A2003B1627 /* QuestionBO.swift */; };
 		873F00A927ACC5D2003B1627 /* CategoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A827ACC5D2003B1627 /* CategoryItemModel.swift */; };
@@ -132,6 +153,23 @@
 		48F5F17727486A3300DCF0FD /* RecoveryAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryAccountPresenter.swift; sourceTree = "<group>"; };
 		6A187F5A27A7914700AD5CA5 /* NewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCell.swift; sourceTree = "<group>"; };
 		6A187F5B27A7914700AD5CA5 /* NewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCell.xib; sourceTree = "<group>"; };
+		6A1B5FCE27AEA15100B56400 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		6A1B5FCF27AEA15100B56400 /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		6A1B5FD227AEA25900B56400 /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
+		6A37CD1727AE6D2F0093AF8D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		6A37CD1927AE6E020093AF8D /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		6A37CD1B27AE73540093AF8D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		6A37CD1D27AE7FAF0093AF8D /* LevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
+		6A37CD1E27AE7FAF0093AF8D /* LevelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCell.xib; sourceTree = "<group>"; };
+		6A37CD2227AE82530093AF8D /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
+		6A37CD2327AE82530093AF8D /* GoalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalViewController.xib; sourceTree = "<group>"; };
+		6A37CD2627AE91950093AF8D /* GoalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPresenter.swift; sourceTree = "<group>"; };
+		6A37CD2927AE9E9A0093AF8D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		6A37CD2A27AE9E9A0093AF8D /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
+		6A62B92927AE309B00A34A89 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		6A62B92A27AE309B00A34A89 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
+		6A62B92D27AE32D600A34A89 /* SelectedAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnswerCell.swift; sourceTree = "<group>"; };
+		6A62B92E27AE32D600A34A89 /* SelectedAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedAnswerCell.xib; sourceTree = "<group>"; };
 		6AB9B0F627A50FA800F238CF /* ViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Action.swift"; sourceTree = "<group>"; };
 		873F00A427ACBD02003B1627 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		873F00A627ACC5A2003B1627 /* QuestionBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionBO.swift; path = "NEAR Learning/BO/QuestionBO.swift"; sourceTree = SOURCE_ROOT; };
@@ -154,12 +192,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD0D1CB27ACEEAD008B5D3F /* RealmSwift in Frameworks */,
+				6AD0D1C927ACEEAD008B5D3F /* Realm in Frameworks */,
+				6AD0D1CE27AD9E3B008B5D3F /* NVActivityIndicatorView in Frameworks */,
 				876A6AF427A6212400F0F096 /* FirebaseDatabase in Frameworks */,
 				876A6AF627A6212400F0F096 /* FirebaseFirestore in Frameworks */,
 				876A6AF827A6212400F0F096 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				876A6AF027A6212400F0F096 /* FirebaseAuth in Frameworks */,
 				876A6AF227A6212400F0F096 /* FirebaseCrashlytics in Frameworks */,
 				6A187F5927A78E9800AD5CA5 /* AlamofireImage in Frameworks */,
+				6AD0D1D027AD9E3B008B5D3F /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +241,14 @@
 				48DAB5EF276574E600EA891F /* LessonCell.xib */,
 				6A187F5A27A7914700AD5CA5 /* NewCell.swift */,
 				6A187F5B27A7914700AD5CA5 /* NewCell.xib */,
+				6A62B92927AE309B00A34A89 /* AnswerCell.swift */,
+				6A62B92A27AE309B00A34A89 /* AnswerCell.xib */,
+				6A62B92D27AE32D600A34A89 /* SelectedAnswerCell.swift */,
+				6A62B92E27AE32D600A34A89 /* SelectedAnswerCell.xib */,
+				6A37CD1D27AE7FAF0093AF8D /* LevelCell.swift */,
+				6A37CD1E27AE7FAF0093AF8D /* LevelCell.xib */,
+				6A1B5FCE27AEA15100B56400 /* QuestionCell.swift */,
+				6A1B5FCF27AEA15100B56400 /* QuestionCell.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -298,6 +348,8 @@
 		48F5F1542748025300DCF0FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A37CD2827AE9E800093AF8D /* Question */,
+				6A37CD2127AE823A0093AF8D /* Goal */,
 				481EA92C2759DCB9007678A3 /* Test */,
 				481EA92B2759DCAB007678A3 /* Lessons */,
 				481EA92A2759DC71007678A3 /* Snippets */,
@@ -320,6 +372,9 @@
 				48F5F175274864DA00DCF0FD /* SignUpPresenter.swift */,
 				48F5F17727486A3300DCF0FD /* RecoveryAccountPresenter.swift */,
 				876A6AFC27A62DE500F0F096 /* NewsPresenter.swift */,
+				6A37CD1B27AE73540093AF8D /* TestPresenter.swift */,
+				6A37CD2627AE91950093AF8D /* GoalPresenter.swift */,
+				6A1B5FD227AEA25900B56400 /* QuestionPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -388,6 +443,24 @@
 			path = RecoveryAccount;
 			sourceTree = "<group>";
 		};
+		6A37CD2127AE823A0093AF8D /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				6A37CD2227AE82530093AF8D /* GoalViewController.swift */,
+				6A37CD2327AE82530093AF8D /* GoalViewController.xib */,
+			);
+			path = Goal;
+			sourceTree = "<group>";
+		};
+		6A37CD2827AE9E800093AF8D /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				6A37CD2927AE9E9A0093AF8D /* QuestionViewController.swift */,
+				6A37CD2A27AE9E9A0093AF8D /* QuestionViewController.xib */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
 		873F00A327ACBCDC003B1627 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +478,8 @@
 				873F00AC27ACD1BB003B1627 /* QuestionItemModel.swift */,
 				873F00AE27ACD668003B1627 /* SnippetItemModel.swift */,
 				873F00B027ACD810003B1627 /* LessonItemModel.swift */,
+				6A37CD1727AE6D2F0093AF8D /* Store.swift */,
+				6A37CD1927AE6E020093AF8D /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -446,6 +521,10 @@
 				876A6AF527A6212400F0F096 /* FirebaseFirestore */,
 				876A6AF727A6212400F0F096 /* FirebaseFirestoreSwift-Beta */,
 				6A187F5827A78E9800AD5CA5 /* AlamofireImage */,
+				6AD0D1C827ACEEAD008B5D3F /* Realm */,
+				6AD0D1CA27ACEEAD008B5D3F /* RealmSwift */,
+				6AD0D1CD27AD9E3B008B5D3F /* NVActivityIndicatorView */,
+				6AD0D1CF27AD9E3B008B5D3F /* NVActivityIndicatorViewExtended */,
 			);
 			productName = "NEAR Learning";
 			productReference = 48F5F1202748012B00DCF0FD /* NEAR Learning.app */;
@@ -522,6 +601,8 @@
 			packageReferences = (
 				876A6AEE27A6212400F0F096 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				6A187F5727A78E9800AD5CA5 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				6AD0D1C727ACEEAD008B5D3F /* XCRemoteSwiftPackageReference "realm-swift" */,
+				6AD0D1CC27AD9E3A008B5D3F /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = 48F5F1212748012B00DCF0FD /* Products */;
 			projectDirPath = "";
@@ -540,12 +621,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				48F5F1722748609100DCF0FD /* RecoveryAccountViewController.xib in Resources */,
+				6A37CD2027AE7FAF0093AF8D /* LevelCell.xib in Resources */,
 				48F5F163274807DD00DCF0FD /* SignUpViewController.xib in Resources */,
 				48F5F15E2748077700DCF0FD /* LoginViewController.xib in Resources */,
 				48F5F1302748012F00DCF0FD /* LaunchScreen.storyboard in Resources */,
+				6A37CD2527AE82530093AF8D /* GoalViewController.xib in Resources */,
 				481EA9302759DCE6007678A3 /* TestViewController.xib in Resources */,
 				4808886F2752729700BD0EED /* CoursesCell.xib in Resources */,
+				6A62B93027AE32D600A34A89 /* SelectedAnswerCell.xib in Resources */,
+				6A62B92C27AE309B00A34A89 /* AnswerCell.xib in Resources */,
 				6A187F5D27A7914700AD5CA5 /* NewCell.xib in Resources */,
+				6A1B5FD127AEA15100B56400 /* QuestionCell.xib in Resources */,
+				6A37CD2C27AE9E9A0093AF8D /* QuestionViewController.xib in Resources */,
 				481EA9342759DCFD007678A3 /* LessonViewController.xib in Resources */,
 				875D4D4727A3B34600B09175 /* GoogleService-Info.plist in Resources */,
 				48F5F12D2748012F00DCF0FD /* Assets.xcassets in Resources */,
@@ -600,6 +687,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A37CD1F27AE7FAF0093AF8D /* LevelCell.swift in Sources */,
+				6A37CD2727AE91950093AF8D /* GoalPresenter.swift in Sources */,
 				481EA9422759EF36007678A3 /* UIView+Action.swift in Sources */,
 				48F5F16D2748410B00DCF0FD /* LoginPresenter.swift in Sources */,
 				48F5F162274807DD00DCF0FD /* SignUpViewController.swift in Sources */,
@@ -612,20 +701,27 @@
 				48F5F1242748012B00DCF0FD /* AppDelegate.swift in Sources */,
 				48DAB5F0276574E600EA891F /* LessonCell.swift in Sources */,
 				873F00AD27ACD1BB003B1627 /* QuestionItemModel.swift in Sources */,
+				6A37CD1C27AE73540093AF8D /* TestPresenter.swift in Sources */,
 				876A6AED27A61E4500F0F096 /* NewsBO.swift in Sources */,
 				873F00A727ACC5A2003B1627 /* QuestionBO.swift in Sources */,
+				6A62B92B27AE309B00A34A89 /* AnswerCell.swift in Sources */,
 				48F5F17827486A3300DCF0FD /* RecoveryAccountPresenter.swift in Sources */,
 				48F5F1592748071000DCF0FD /* RootViewController.swift in Sources */,
+				6A37CD1A27AE6E020093AF8D /* Session.swift in Sources */,
+				6A1B5FD027AEA15100B56400 /* QuestionCell.swift in Sources */,
 				481EA9332759DCFD007678A3 /* LessonViewController.swift in Sources */,
 				48F5F15D2748077700DCF0FD /* LoginViewController.swift in Sources */,
 				873F00B527ACDEAD003B1627 /* LessonBO.swift in Sources */,
 				873F00B327ACDCBF003B1627 /* SnnipetsBO.swift in Sources */,
 				873F00B127ACD810003B1627 /* LessonItemModel.swift in Sources */,
+				6A37CD2B27AE9E9A0093AF8D /* QuestionViewController.swift in Sources */,
+				6A37CD2427AE82530093AF8D /* GoalViewController.swift in Sources */,
 				48F5F167274809C800DCF0FD /* HomeViewController.swift in Sources */,
 				481EA93B2759DD1B007678A3 /* PathViewController.swift in Sources */,
 				873F00A927ACC5D2003B1627 /* CategoryItemModel.swift in Sources */,
 				481EA9372759DD0E007678A3 /* SnippetViewController.swift in Sources */,
 				873F00A527ACBD02003B1627 /* FirebaseService.swift in Sources */,
+				6A1B5FD327AEA25900B56400 /* QuestionPresenter.swift in Sources */,
 				481EA92F2759DCE6007678A3 /* TestViewController.swift in Sources */,
 				48F5F1262748012B00DCF0FD /* SceneDelegate.swift in Sources */,
 				6AB9B0F727A50FA800F238CF /* ViewController+Action.swift in Sources */,
@@ -633,6 +729,8 @@
 				873F00AB27ACC913003B1627 /* LevelItemModel.swift in Sources */,
 				48F5F176274864DA00DCF0FD /* SignUpPresenter.swift in Sources */,
 				876A6AFD27A62DE500F0F096 /* NewsPresenter.swift in Sources */,
+				6A37CD1827AE6D2F0093AF8D /* Store.swift in Sources */,
+				6A62B92F27AE32D600A34A89 /* SelectedAnswerCell.swift in Sources */,
 				48F5F174274864A400DCF0FD /* UINavigationController+Action.swift in Sources */,
 				6A187F5C27A7914700AD5CA5 /* NewCell.swift in Sources */,
 				481EA93F2759DEDE007678A3 /* TestCell.swift in Sources */,
@@ -814,7 +912,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FW5Z9GGJ86;
+				DEVELOPMENT_TEAM = 6PU58N93KN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -843,7 +941,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FW5Z9GGJ86;
+				DEVELOPMENT_TEAM = 6PU58N93KN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1011,6 +1109,22 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		6AD0D1C727ACEEAD008B5D3F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		6AD0D1CC27AD9E3A008B5D3F /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		876A6AEE27A6212400F0F096 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1026,6 +1140,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6A187F5727A78E9800AD5CA5 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		6AD0D1C827ACEEAD008B5D3F /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AD0D1C727ACEEAD008B5D3F /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		6AD0D1CA27ACEEAD008B5D3F /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AD0D1C727ACEEAD008B5D3F /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		6AD0D1CD27AD9E3B008B5D3F /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AD0D1CC27AD9E3A008B5D3F /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		6AD0D1CF27AD9E3B008B5D3F /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AD0D1CC27AD9E3A008B5D3F /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
 		};
 		876A6AEF27A6212400F0F096 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
