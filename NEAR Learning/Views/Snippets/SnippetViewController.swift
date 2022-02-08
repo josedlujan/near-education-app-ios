@@ -6,20 +6,23 @@
 //
 
 import UIKit
-
+import WebKit
 class SnippetViewController: UIViewController {
     // MARK: Outlets
+    @IBOutlet weak var codeWKView: WKWebView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var snippetCodeTextView: UITextView!
     var snippet:SnippetItem!
         
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupHTML()
     }
   private func setupUI(){
     title = "Snippet"
-      titleLabel.text = snippet.title
-      snippetCodeTextView.text = snippet.code
+    titleLabel.text = snippet.title
   }
+    func setupHTML(){
+        codeWKView.loadHTMLString(snippet.code.htmlBuilder(), baseURL: nil)
+    }
 }

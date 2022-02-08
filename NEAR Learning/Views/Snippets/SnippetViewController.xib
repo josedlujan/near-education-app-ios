@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SnippetViewController" customModule="NEAR_Learning" customModuleProvider="target">
             <connections>
-                <outlet property="snippetCodeTextView" destination="G5L-Qw-kTS" id="Zrl-Wv-LhH"/>
+                <outlet property="codeWKView" destination="LZf-Be-H1A" id="00d-tl-DYw"/>
                 <outlet property="titleLabel" destination="lT0-Cb-ZPB" id="Ww0-Jj-LXW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,29 +31,29 @@
                     <color key="textColor" name="ColorTextPurple"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5L-Qw-kTS">
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZf-Be-H1A">
                     <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <color key="textColor" name="TextGeneralColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="GeneralColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RWl-xc-Rrn" secondAttribute="bottom" id="0t3-Ev-MIM"/>
-                <constraint firstItem="G5L-Qw-kTS" firstAttribute="top" secondItem="lT0-Cb-ZPB" secondAttribute="bottom" constant="16" id="1u6-Ph-cmj"/>
                 <constraint firstItem="lT0-Cb-ZPB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="21w-5W-TAg"/>
                 <constraint firstItem="RWl-xc-Rrn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3xU-dI-Bnd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lT0-Cb-ZPB" secondAttribute="trailing" constant="16" id="5Mf-Xb-3UP"/>
+                <constraint firstItem="LZf-Be-H1A" firstAttribute="top" secondItem="lT0-Cb-ZPB" secondAttribute="bottom" constant="16" id="5jC-kw-xS3"/>
                 <constraint firstItem="lT0-Cb-ZPB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7Ls-57-4FZ"/>
-                <constraint firstItem="G5L-Qw-kTS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FVj-ge-ZCv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G5L-Qw-kTS" secondAttribute="trailing" id="Igf-bb-u7k"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LZf-Be-H1A" secondAttribute="bottom" id="OVd-5Y-IIN"/>
                 <constraint firstItem="RWl-xc-Rrn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TU3-Mg-2Jm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RWl-xc-Rrn" secondAttribute="trailing" id="aOu-2g-ufc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G5L-Qw-kTS" secondAttribute="bottom" id="y7c-RQ-VCA"/>
+                <constraint firstItem="LZf-Be-H1A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="d2O-QL-Pli"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LZf-Be-H1A" secondAttribute="trailing" id="k8v-Jt-Lvh"/>
             </constraints>
             <point key="canvasLocation" x="139" y="79"/>
         </view>
@@ -67,9 +67,6 @@
         </namedColor>
         <namedColor name="NewContainerColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="TextGeneralColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
