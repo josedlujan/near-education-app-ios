@@ -26,4 +26,8 @@ class LevelCell: UITableViewCell {
     subtitleLabel.text = "Nivel: " + level.levelDescription
   }
     
+    func bindWithSnippet(snippet:SnippetItem){
+        titleLabel.text = snippet.title
+        subtitleLabel.text = ""
+    }
 }

@@ -92,7 +92,7 @@ class QuestionBO{
           print(error)
         }
       }
-      callback(questions,false)
+        callback(questions.sorted(by: {$0.id < $1.id}),false)
     }
   }
 }

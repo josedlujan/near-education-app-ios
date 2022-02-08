@@ -35,5 +35,5 @@ class NewsPresenter{
   func indicatorView(present: Bool){
     view?.indcatorView(animating: present)
   }
-  
+
 }

@@ -28,7 +28,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
   func createViewControllers() {
     let tabHome = tabItem(viewController: HomeViewController(), title: "Inicio", image: UIImage(named: "icnHome")!)
     let tabPath = tabItem(viewController: PathViewController(), title: "Path", image: UIImage(named: "icnPath")!)
-    let tabSnippets = tabItem(viewController: SnippetViewController(), title: "Snippets", image: UIImage(named: "icnSnippets")!)
+    let tabSnippets = tabItem(viewController:CategorySnippetViewController(), title: "Snippets", image: UIImage(named: "icnSnippets")!)
     let tabLessons = tabItem(viewController: LessonViewController(), title: "Lecciones", image: UIImage(named: "icnLessons")!)
     let tabTest = tabItem(viewController: TestViewController(), title: "Test", image: UIImage(named: "icnTest")!)
     self.viewControllers = [tabHome, tabPath, tabSnippets, tabLessons, tabTest]

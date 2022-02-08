@@ -21,5 +21,9 @@ class LessonCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func bindWithLesson(lesson: LessonItem) {
+      titleLabel.text = lesson.title
+      subtitleLabel.text = lesson.author
+    }
     
 }

@@ -7,12 +7,9 @@
 
 import Foundation
 class LessonBO{
-    let firebaseService:FirebaseService!
-    init(firebaseService:FirebaseService) {
-        self.firebaseService = firebaseService
-    }
+    static let firebaseService = FirebaseService.shared
     
-    func getAllLessons(callback:@escaping([LessonItem],Bool)->Void){
+   static func getAllLessons(callback:@escaping([LessonItem],Bool)->Void){
         self.firebaseService.db.collection("Lecciones").getDocuments(){(querySnapshot,err) in
             var lessons:[LessonItem] = []
                 if let error = err{

@@ -7,12 +7,9 @@
 
 import Foundation
 class SnippetsBO{
-    let firebaseService:FirebaseService!
-    init(firebaseService:FirebaseService) {
-        self.firebaseService = firebaseService
-    }
+    static let firebaseService = FirebaseService.shared
     
-    func getAllCaterories(callback:@escaping([CategoryItem],Bool)->Void){
+ static   func getAllCaterories(callback:@escaping([CategoryItem],Bool)->Void){
         self.firebaseService.db.collection("SnippetsCategorias").getDocuments(){(querySnapshot,err) in
             var categories:[CategoryItem] = []
                 if let error = err{
@@ -41,7 +38,7 @@ class SnippetsBO{
             }
         }
     
-    func getSnnipetByCategory(idCategory:String, callback:@escaping([SnippetItem],Bool)->Void){
+  static  func getSnnipetByCategory(idCategory:String, callback:@escaping([SnippetItem],Bool)->Void){
         self.firebaseService.db.collection("Snippets").whereField("id_categoria",isEqualTo: idCategory).getDocuments(){(querySnapshot,err) in
             var snnipets:[SnippetItem] = []
             if let error = err{
@@ -66,7 +63,7 @@ class SnippetsBO{
                     print(error)
                 }
             }
-         callback(snnipets,false)
+         callback(snnipets.sorted(by:{$0.id < $1.id}),false)
         }
     }
 }

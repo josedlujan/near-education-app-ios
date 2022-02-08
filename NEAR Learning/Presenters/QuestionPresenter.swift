@@ -25,7 +25,7 @@ class QuestionPresenter {
     view?.indicatorView(animating: true)
     QuestionBO.getQuestionsByCategory(idCategory: idCategory) {[weak self] questions, isError in
       if !isError {
-        self?.questions = questions.sorted(by: {$0.id < $1.id})
+        self?.questions = questions
         onSuccess()
       } else {
         self?.view?.indicatorView(animating: false)
