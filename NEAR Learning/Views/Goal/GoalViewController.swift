@@ -59,7 +59,7 @@ extension GoalViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let questionVC = QuestionViewController()
     let level = presenter.levels[indexPath.row]
-    questionVC.idCategory = level.idCategory
+      questionVC.currentLevel = level
     navigationController?.pushViewController(questionVC, animated: true)
   }
 }

@@ -16,14 +16,15 @@ class QuestionPresenter {
   var questions: [QuestionItem] = []
   var answerSelected: [QuestionItem] = []
   var answerTemp: [AnswerDisplay] = []
+  var answers:[AnswerItem] = []
 
   init(with view: QuestionPresenterView) {
     self.view = view
   }
   
-  func getQuesions(idCategory: String, onSuccess: @escaping() -> Void){
+    func getQuesions(idCategory: String,level:String, onSuccess: @escaping() -> Void){
     view?.indicatorView(animating: true)
-    QuestionBO.getQuestionsByCategory(idCategory: idCategory) {[weak self] questions, isError in
+      QuestionBO.getQuestionsByCategory(idCategory: idCategory, level: level) {[weak self] questions, isError in
       if !isError {
         self?.questions = questions
         onSuccess()
@@ -37,7 +38,33 @@ class QuestionPresenter {
   func indicatorView(present: Bool){
     view?.indicatorView(animating: present)
   }
-  
+    //MARK: TODO implementar logica para obetener AnswerItem
+    
+    func saveAnswers(answers:AnswerItem,OnSuccess:@escaping()->Void){
+        QuestionBO.sedAnswers(answers: answers){[weak self] message,isError in
+            if !isError{
+                self?.view?.showMessage(message:message)
+                OnSuccess()
+            }
+            else{
+                self?.view?.indicatorView(animating: false)
+                self?.view?.showMessage(message: message)
+            }
+        }
+    }
+    
+    func getAnswers(idCategoria:String,userMail:String,OnSuccess:@escaping()->Void){
+        QuestionBO.getAnswers(idCategory: idCategoria, userMail: userMail){[weak self] answers,isError in
+            if !isError {
+                self?.answers = answers
+                OnSuccess()
+            }
+            else{
+                self?.view?.indicatorView(animating: false)
+                self?.view?.showMessage(message: "No se encontraron respuestas")
+            }
+        }
+    }
   
   func answer(section: Int, answer: String) {
     let answerSelected = AnswerDisplay(index: section, answer: answer)

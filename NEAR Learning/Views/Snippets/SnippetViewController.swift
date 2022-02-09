@@ -21,7 +21,7 @@ class SnippetViewController: UIViewController {
   private func setupUI(){
     title = "Código"
     titleLabel.text = snippet.title
-      codeWKView.scrollView.bounces = false
+    codeWKView.scrollView.bounces = false
   }
     func setupHTML(){
         codeWKView.loadHTMLString(snippet.code.htmlBuilder(), baseURL: nil)

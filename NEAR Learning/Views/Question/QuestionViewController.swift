@@ -12,12 +12,13 @@ class QuestionViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   lazy var presenter = QuestionPresenter(with: self)
   private var activityIndicator: NVActivityIndicatorView!
-  var idCategory: String = ""
+  var currentLevel:LevelItem!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
     questionsCallback()
+    asnwersCallback()
   }
   
   func setupUI() {
@@ -34,11 +35,23 @@ class QuestionViewController: UIViewController {
   }
   
   private func questionsCallback() {
-    presenter.getQuesions(idCategory: idCategory) {
+      presenter.getQuesions(idCategory: currentLevel.idCategory, level: currentLevel.id) {
       self.presenter.indicatorView(present: false)
       self.tableView.reloadData()
     }
+      
+      
+      /*presenter.saveAnswers(answers:AnswerItem(userMail: "ingscjoshua@gmail.com", rigthAnswers: 3, failAnswers: 5, idCategory: "1SdLBR6NtVV9C4qQAOnS", idLevel: "Qlcm7ZZ0etuU0U7jSPRr")){
+          self.presenter.indicatorView(present: false)
+      }*/
+      
   }
+    private func asnwersCallback(){
+        //MARK: TODO Reemplazar por el mail del usuario logueado
+        presenter.getAnswers(idCategoria: currentLevel.idCategory, userMail: "ingscjoshua@gmail.com"){
+            self.presenter.indicatorView(present: false)
+        }
+    }
 }
 
 extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
