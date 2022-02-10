@@ -59,7 +59,9 @@ extension GoalViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let questionVC = QuestionViewController()
     let level = presenter.levels[indexPath.row]
-      questionVC.currentLevel = level
+    questionVC.currentLevel = level
+    questionVC.delegate = self
+    navigationItem.backButtonTitle = ""
     navigationController?.pushViewController(questionVC, animated: true)
   }
 }
@@ -69,7 +71,7 @@ extension GoalViewController: GoalPresenterView {
   func showMessage(message: String) {
     debugPrint(message)
   }
-  
+
   func indicatorView(animating: Bool) {
     switch animating{
     case true:
@@ -78,6 +80,10 @@ extension GoalViewController: GoalPresenterView {
       activityIndicator.stopAnimating()
     }
   }
-  
-  
+}
+
+extension GoalViewController: QuestionDelegate {
+  func reloadData() {
+    tableView.reloadData()
+  }
 }

@@ -78,6 +78,8 @@
 		6AD0D1CB27ACEEAD008B5D3F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1CA27ACEEAD008B5D3F /* RealmSwift */; };
 		6AD0D1CE27AD9E3B008B5D3F /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1CD27AD9E3B008B5D3F /* NVActivityIndicatorView */; };
 		6AD0D1D027AD9E3B008B5D3F /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1CF27AD9E3B008B5D3F /* NVActivityIndicatorViewExtended */; };
+		6AE809AC27B4BC3400BBEAB3 /* Evaluate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE809AB27B4BC3400BBEAB3 /* Evaluate.swift */; };
+		6AE809AE27B5804700BBEAB3 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE809AD27B5804700BBEAB3 /* UserSession.swift */; };
 		873F00A527ACBD02003B1627 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A427ACBD02003B1627 /* FirebaseService.swift */; };
 		873F00A727ACC5A2003B1627 /* QuestionBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A627ACC5A2003B1627 /* QuestionBO.swift */; };
 		873F00A927ACC5D2003B1627 /* CategoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A827ACC5D2003B1627 /* CategoryItemModel.swift */; };
@@ -200,6 +202,8 @@
 		6A62B92D27AE32D600A34A89 /* SelectedAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnswerCell.swift; sourceTree = "<group>"; };
 		6A62B92E27AE32D600A34A89 /* SelectedAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedAnswerCell.xib; sourceTree = "<group>"; };
 		6AB9B0F627A50FA800F238CF /* ViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Action.swift"; sourceTree = "<group>"; };
+		6AE809AB27B4BC3400BBEAB3 /* Evaluate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluate.swift; sourceTree = "<group>"; };
+		6AE809AD27B5804700BBEAB3 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		873F00A427ACBD02003B1627 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		873F00A627ACC5A2003B1627 /* QuestionBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionBO.swift; path = "NEAR Learning/BO/QuestionBO.swift"; sourceTree = SOURCE_ROOT; };
 		873F00A827ACC5D2003B1627 /* CategoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemModel.swift; sourceTree = "<group>"; };
@@ -557,6 +561,8 @@
 				87DD1AC527B3774D0045752D /* PathCategoryModel.swift */,
 				87DD1AC727B37AF30045752D /* PathItemModel.swift */,
 				87DD1ACD27B388BB0045752D /* AnswerItemModel.swift */,
+				6AE809AB27B4BC3400BBEAB3 /* Evaluate.swift */,
+				6AE809AD27B5804700BBEAB3 /* UserSession.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -790,6 +796,7 @@
 				876A6AFB27A6251200F0F096 /* NewsItemModel.swift in Sources */,
 				87DD1AC627B3774D0045752D /* PathCategoryModel.swift in Sources */,
 				48F5F1712748609100DCF0FD /* RecoveryAccountViewController.swift in Sources */,
+				6AE809AE27B5804700BBEAB3 /* UserSession.swift in Sources */,
 				8779226127A3BE5600B41B91 /* SignupBO.swift in Sources */,
 				873F00AF27ACD668003B1627 /* SnippetItemModel.swift in Sources */,
 				48F5F16B274838BD00DCF0FD /* UITextField+Action.swift in Sources */,
@@ -811,6 +818,7 @@
 				6A37CD1A27AE6E020093AF8D /* Session.swift in Sources */,
 				6A1508D227B351E800C6D8BC /* LessonDetailViewController.swift in Sources */,
 				6A1B5FD027AEA15100B56400 /* QuestionCell.swift in Sources */,
+				6AE809AC27B4BC3400BBEAB3 /* Evaluate.swift in Sources */,
 				481EA9332759DCFD007678A3 /* LessonViewController.swift in Sources */,
 				48F5F15D2748077700DCF0FD /* LoginViewController.swift in Sources */,
 				873F00B527ACDEAD003B1627 /* LessonBO.swift in Sources */,

@@ -16,6 +16,7 @@ class AnswerCell: UITableViewCell {
   var answers: [String] = []
   var answersTemp: [AnswerDisplay] = []
   var section: IndexPath!
+  var questions: [QuestionItem] = []
 
   weak var delegate: AnswerCellDelegate?
   
@@ -32,6 +33,7 @@ class AnswerCell: UITableViewCell {
   }
   
   func bindWithAnswers(questions: [QuestionItem], indexPath: IndexPath, answerTemp: [AnswerDisplay]) {
+    self.questions = questions
     self.answers = questions[indexPath.section].answers
     self.section = indexPath
     self.answersTemp = answerTemp
@@ -61,8 +63,10 @@ extension AnswerCell: UICollectionViewDelegate, UICollectionViewDataSource {
   
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let question = questions[section.section]
     let answer = answers[indexPath.row]
     delegate?.answer(section: section.section, answer: answer)
+    Evaluate.evaluateAnswer(question: question, index: section.section, answer: answer)
   }
 }
 
