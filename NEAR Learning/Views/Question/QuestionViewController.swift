@@ -37,6 +37,10 @@ class QuestionViewController: UIViewController {
   private func questionsCallback() {
       presenter.getQuesions(idCategory: currentLevel.idCategory, level: currentLevel.id) {
       self.presenter.indicatorView(present: false)
+//=======
+//    presenter.getQuesions(idCategory: idCategory) {
+//      self.presenter.indicatorView(present: false)
+//>>>>>>> feature/evaluate
       self.tableView.reloadData()
     }
       
@@ -46,12 +50,20 @@ class QuestionViewController: UIViewController {
       }*/
       
   }
+  
     private func asnwersCallback(){
         //MARK: TODO Reemplazar por el mail del usuario logueado
         presenter.getAnswers(idCategoria: currentLevel.idCategory, userMail: "ingscjoshua@gmail.com"){
             self.presenter.indicatorView(present: false)
         }
     }
+
+  
+  @IBAction func evaluateAction(_ sender: UIButton) {
+    let evaluateVC = EvaluateViewController()
+    present(evaluateVC, animated: true, completion: nil)
+  }
+>>>>>>> feature/evaluate
 }
 
 extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
