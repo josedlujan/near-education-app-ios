@@ -22,28 +22,46 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mbk-xT-sBe">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="758"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="rJ6-pE-edi"/>
                         <outlet property="delegate" destination="-1" id="efb-QY-WKF"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qo-5V-fth">
+                    <rect key="frame" x="41.5" y="812" width="331" height="40"/>
+                    <color key="backgroundColor" name="ColorTextPurple"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ycj-mn-p1Q"/>
+                    </constraints>
+                    <color key="tintColor" name="WhiteCustomColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="EVALUAR"/>
+                    <connections>
+                        <action selector="evaluateAction:" destination="-1" eventType="touchUpInside" id="6lK-uH-b4f"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="GeneralColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6qo-5V-fth" secondAttribute="bottom" constant="10" id="7dz-hO-hgH"/>
                 <constraint firstItem="Mbk-xT-sBe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CdI-vi-zR7"/>
                 <constraint firstItem="Mbk-xT-sBe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="O0f-iV-e99"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Mbk-xT-sBe" secondAttribute="bottom" id="YTC-vP-wD7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mbk-xT-sBe" secondAttribute="trailing" id="g5E-kB-mfl"/>
+                <constraint firstItem="6qo-5V-fth" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="qT8-e1-MPP"/>
+                <constraint firstItem="6qo-5V-fth" firstAttribute="top" secondItem="Mbk-xT-sBe" secondAttribute="bottom" constant="10" id="rhA-dI-She"/>
+                <constraint firstItem="6qo-5V-fth" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="x90-y5-15O"/>
             </constraints>
             <point key="canvasLocation" x="139" y="82"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="GeneralColor">
+        <namedColor name="ColorTextPurple">
             <color red="0.38400000333786011" green="0.0" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteCustomColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

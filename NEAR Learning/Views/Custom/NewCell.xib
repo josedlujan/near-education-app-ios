@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bns-IY-GEa">
                         <rect key="frame" x="8" y="7" width="304" height="126"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mathImage" translatesAutoresizingMaskIntoConstraints="NO" id="4o1-rQ-ySg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4o1-rQ-ySg">
                                 <rect key="frame" x="0.0" y="0.0" width="126" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4o1-rQ-ySg" secondAttribute="height" multiplier="1:1" id="niD-mM-5ds"/>
@@ -92,7 +92,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="mathImage" width="1200" height="1200"/>
+        <image name="placeholder" width="512" height="512"/>
         <namedColor name="NewContainerColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

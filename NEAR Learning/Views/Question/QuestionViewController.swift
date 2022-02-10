@@ -35,9 +35,14 @@ class QuestionViewController: UIViewController {
   
   private func questionsCallback() {
     presenter.getQuesions(idCategory: idCategory) {
-      self.presenter.indicatorView(present: false)
+      self.presenter.indicatorView(present: false) 
       self.tableView.reloadData()
     }
+  }
+  
+  @IBAction func evaluateAction(_ sender: UIButton) {
+    let evaluateVC = EvaluateViewController()
+    present(evaluateVC, animated: true, completion: nil)
   }
 }
 
