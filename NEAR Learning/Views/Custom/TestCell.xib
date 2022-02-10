@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4PH-r0-ARc">
                         <rect key="frame" x="8" y="10" width="304" height="80"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mathImage" translatesAutoresizingMaskIntoConstraints="NO" id="na6-pk-yd1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="na6-pk-yd1">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="na6-pk-yd1" secondAttribute="height" multiplier="1:1" id="UwM-ze-1NM"/>
@@ -73,7 +73,7 @@
     </objects>
     <resources>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
-        <image name="mathImage" width="1200" height="1200"/>
+        <image name="placeholder" width="512" height="512"/>
         <namedColor name="NewContainerColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

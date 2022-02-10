@@ -15,7 +15,8 @@ protocol GoalPresenterView: AnyObject {
 class GoalPresenter {
   weak var view: GoalPresenterView?
   var levels: [LevelItem] = []
-
+  var answers:[AnswerItem] = []
+  
   init(with view: GoalPresenterView) {
     self.view = view
   }
@@ -32,9 +33,22 @@ class GoalPresenter {
       }
     }
   }
-
+  
+  func getEvaluation(idCategoria:String, email:String, OnSuccess: @escaping()->Void){
+    QuestionBO.getAnswers(idCategory: idCategoria, userMail: email){[weak self] answers,isError in
+      if !isError {
+        self?.answers = answers
+        OnSuccess()
+      }
+      else{
+        self?.view?.indicatorView(animating: false)
+        self?.view?.showMessage(message: "No se encontraron respuestas")
+      }
+    }
+  }
+  
   func indicatorView(present: Bool){
     view?.indicatorView(animating: present)
   }
-
+  
 }

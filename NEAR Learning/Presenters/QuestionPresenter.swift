@@ -16,19 +16,21 @@ class QuestionPresenter {
   var questions: [QuestionItem] = []
   var answerSelected: [QuestionItem] = []
   var answerTemp: [AnswerDisplay] = []
-  var answers:[AnswerItem] = []
+  var questionsCount: Int = 0
 
   init(with view: QuestionPresenterView) {
     self.view = view
   }
   
-    func getQuesions(idCategory: String,level:String, onSuccess: @escaping() -> Void){
+    func getQuesions(idCategory: String, level: String, onSuccess: @escaping() -> Void){
     view?.indicatorView(animating: true)
       QuestionBO.getQuestionsByCategory(idCategory: idCategory, level: level) {[weak self] questions, isError in
       if !isError {
         self?.questions = questions
+        self?.questionsCount = questions.count
         onSuccess()
       } else {
+        self?.questionsCount = questions.count
         self?.view?.indicatorView(animating: false)
         self?.view?.showMessage(message: "No se pudieron obtener los niveles")
       }
@@ -37,44 +39,17 @@ class QuestionPresenter {
 
   func indicatorView(present: Bool){
     view?.indicatorView(animating: present)
-  }
-    //MARK: TODO implementar logica para obetener AnswerItem
-    
-    func saveAnswers(answers:AnswerItem,OnSuccess:@escaping()->Void){
-        QuestionBO.sedAnswers(answers: answers){[weak self] message,isError in
-            if !isError{
-                self?.view?.showMessage(message:message)
-                OnSuccess()
-            }
-            else{
-                self?.view?.indicatorView(animating: false)
-                self?.view?.showMessage(message: message)
-            }
-        }
-    }
-    
-    func getAnswers(idCategoria:String,userMail:String,OnSuccess:@escaping()->Void){
-        QuestionBO.getAnswers(idCategory: idCategoria, userMail: userMail){[weak self] answers,isError in
-            if !isError {
-                self?.answers = answers
-                OnSuccess()
-            }
-            else{
-                self?.view?.indicatorView(animating: false)
-                self?.view?.showMessage(message: "No se encontraron respuestas")
-            }
-        }
-    }
+  }    
   
   func answer(section: Int, answer: String) {
     let answerSelected = AnswerDisplay(index: section, answer: answer)
     if answerTemp.contains(where: {$0.index == section}) {
-      debugPrint("remove element and added")
+      //remove element and added
       guard let index = answerTemp.firstIndex(where: {$0.index == section}) else {return}
       answerTemp.remove(at: index)
       answerTemp.append(answerSelected)
     } else {
-      debugPrint("add element")
+      //add element"
       answerTemp.append(answerSelected)
     }
     debugPrint(answerSelected, " All elements")
