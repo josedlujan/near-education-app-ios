@@ -11,8 +11,10 @@ class SignupBO {
   
   func signup(email: String, password: String, onSuccess: @escaping() -> Void,
               onFailure: @escaping(_ error: String) -> Void){
-    Auth.auth().createUser(withEmail: email, password:password){ authResul, error in
+    Auth.auth().createUser(withEmail: email, password:password){ authResult, error in
       if error == nil {
+        guard let result = authResult else {return}
+        Session.create(token: result.user.uid, email: email)
         onSuccess()
       } else{
         guard let errorLocalized = error else {return}
@@ -27,7 +29,7 @@ class SignupBO {
     Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
       if error == nil {
         guard let result = authResult else {return}
-        Session.create(token: result.user.uid)
+        Session.create(token: result.user.uid, email: email)
         onSuccess()
       } else{
         guard let errorLocalized = error else {return}

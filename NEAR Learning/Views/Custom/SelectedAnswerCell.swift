@@ -24,10 +24,12 @@ class SelectedAnswerCell: UICollectionViewCell {
 
   
   func validateAnswer(type: [AnswerDisplay], answer: String, section : Int ) {
-    if type.contains(where: {$0.answer == answer}) && type.contains(where: {$0.index == section}) {
+    if type.contains(where: {$0.answer == answer && $0.index == section}) {
       answerImage.image = UIImage(named: "icnCircleOn")
+      answerLabel.textColor = .gray
     } else {
       answerImage.image = UIImage(named: "icnCircleOff")
+      answerLabel.textColor = UIColor(named: "TextGeneralColor")
     }
   }
 

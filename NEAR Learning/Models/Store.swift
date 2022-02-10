@@ -11,15 +11,15 @@ import RealmSwift
 class Store {
   static let sharedInstance = Store()
   let realm: Realm?
-
+  
   private init() {
     do {
       self.realm = try Realm()
     } catch {
-       self.realm = nil
+      self.realm = nil
     }
   }
-
+  
   func deleteAllObjects() {
     do {
       let realm = try Realm()
@@ -30,7 +30,7 @@ class Store {
       print("Unable to delete all objects")
     }
   }
-
+  
   func all(object: Object.Type) -> Results<Object>? {
     if let results = realm?.objects(object) {
       return results
@@ -38,7 +38,7 @@ class Store {
       return nil
     }
   }
-
+  
   func deleteAll(objects: Results<Object>) {
     for obj in objects {
       realm?.beginWrite()
@@ -47,7 +47,7 @@ class Store {
       try! realm?.commitWrite()
     }
   }
-
+  
   func save(object: Object) {
     do {
       try realm?.write {
@@ -55,6 +55,16 @@ class Store {
       }
     } catch {
       print("Unable to save objects")
+    }
+  }
+  
+  func update(object: Object, value: Any, key: String) {
+    do {
+      try realm?.write {
+        object.setValue(value, forKeyPath: key)
+      }
+    } catch {
+      print("Unable to update object")
     }
   }
 }

@@ -39,7 +39,7 @@ class QuestionBO{
   }
   
   static func getLevesByCategory(idCategory:String, callback: @escaping([LevelItem], Bool) -> Void) {
-    self.firebaseService.db.collection("TestNiveles").getDocuments(){(querySnapshot,err) in
+    self.firebaseService.db.collection("TestNiveles").whereField("id_categoria",isEqualTo: idCategory).getDocuments(){(querySnapshot,err) in
       var levels:[LevelItem] = []
       if let error = err{
         debugPrint("error al consultar los niveles \(error)")

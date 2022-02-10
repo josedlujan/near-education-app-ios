@@ -8,20 +8,25 @@
 import UIKit
 import NVActivityIndicatorView
 
+protocol QuestionDelegate: AnyObject{
+  func reloadData()
+}
+
 class QuestionViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   lazy var presenter = QuestionPresenter(with: self)
   private var activityIndicator: NVActivityIndicatorView!
   var currentLevel:LevelItem!
+  weak var delegate: QuestionDelegate?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
     questionsCallback()
-    asnwersCallback()
   }
   
   func setupUI() {
+    title = "Nivel \(currentLevel.levelNumber)"
     tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell")
     tableView.register(UINib(nibName: "AnswerCell", bundle: nil), forCellReuseIdentifier: "AnswerCell")
     tableView.rowHeight = UITableView.automaticDimension
@@ -39,19 +44,23 @@ class QuestionViewController: UIViewController {
       self.presenter.indicatorView(present: false)
       self.tableView.reloadData()
     }
-      
-      
-      /*presenter.saveAnswers(answers:AnswerItem(userMail: "ingscjoshua@gmail.com", rigthAnswers: 3, failAnswers: 5, idCategory: "1SdLBR6NtVV9C4qQAOnS", idLevel: "Qlcm7ZZ0etuU0U7jSPRr")){
-          self.presenter.indicatorView(present: false)
-      }*/
-      
   }
-    private func asnwersCallback(){
-        //MARK: TODO Reemplazar por el mail del usuario logueado
-        presenter.getAnswers(idCategoria: currentLevel.idCategory, userMail: "ingscjoshua@gmail.com"){
-            self.presenter.indicatorView(present: false)
-        }
+    
+  @IBAction func evaluateAction(_ sender: UIButton) {
+    let evaluation = Evaluate.evaluateQuiz(categoryId: currentLevel.idCategory, levelId: currentLevel.id)
+    if evaluation.count == presenter.questionsCount {
+      let evaluateVC = EvaluateViewController()
+      evaluateVC.fail = evaluation.fail
+      evaluateVC.rigth = evaluation.rigth
+      evaluateVC.delegate = self
+      evaluateVC.currentLevel = currentLevel
+      evaluateVC.modalPresentationStyle = .fullScreen
+      present(evaluateVC, animated: true, completion: nil)
+    } else {
+    
     }
+  }
+
 }
 
 extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
@@ -128,5 +137,13 @@ extension QuestionViewController: AnswerCellDelegate {
     let row = IndexPath(row: 1, section: section)
     tableView.reloadRows(at: [row], with: .none)
     //tableView.reloadSections(IndexSet(integer: section), with: .none)
+  }
+}
+
+
+extension QuestionViewController: EvaluateDelegate {
+  func popController() {
+    navigationController?.popViewController(animated: false)
+    delegate?.reloadData()
   }
 }

@@ -16,6 +16,7 @@ class AnswerCell: UITableViewCell {
   var answers: [String] = []
   var answersTemp: [AnswerDisplay] = []
   var section: IndexPath!
+  var questions: [QuestionItem] = []
 
   weak var delegate: AnswerCellDelegate?
   
@@ -32,6 +33,7 @@ class AnswerCell: UITableViewCell {
   }
   
   func bindWithAnswers(questions: [QuestionItem], indexPath: IndexPath, answerTemp: [AnswerDisplay]) {
+    self.questions = questions
     self.answers = questions[indexPath.section].answers
     self.section = indexPath
     self.answersTemp = answerTemp
@@ -54,16 +56,6 @@ extension AnswerCell: UICollectionViewDelegate, UICollectionViewDataSource {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectedAnswerCell",
                                                         for: indexPath) as? SelectedAnswerCell else {fatalError("")}
     let answer = answers[indexPath.row]
-//    if !answersTemp.isEmpty {
-//
-//      if answersTemp.contains(where: {$0.index == indexPath.row}) {
-//        debugPrint(section.section, " LA SECCION")
-//        //debugPrint(answersTemp[indexPath.row].index, " EL INDEX")
-//        cell.answerImage.image = UIImage(named: "icnCircleOn")
-//      } else {
-//        cell.answerImage.image = UIImage(named: "icnCircleOn")
-//      }
-//    }
     cell.bindWithtAnswer(answer: answer, indexPath: section, type: answersTemp)
     return cell
   }
@@ -71,8 +63,10 @@ extension AnswerCell: UICollectionViewDelegate, UICollectionViewDataSource {
   
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let question = questions[section.section]
     let answer = answers[indexPath.row]
     delegate?.answer(section: section.section, answer: answer)
+    Evaluate.evaluateAnswer(question: question, index: section.section, answer: answer)
   }
 }
 
@@ -100,7 +94,7 @@ extension AnswerCell: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 1
+    return 0
   }
 }
 
