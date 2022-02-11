@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PathCell" id="BOd-iU-KI0" customClass="PathCell" customModule="NEAR_Learning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BOd-iU-KI0" id="j5u-yq-Ali">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHr-hz-ugm">
+                        <rect key="frame" x="8" y="10" width="304" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnPathCategory" translatesAutoresizingMaskIntoConstraints="NO" id="bJA-9R-qNV">
+                                <rect key="frame" x="0.0" y="4" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bJA-9R-qNV" secondAttribute="height" multiplier="1:1" id="8bd-JL-695"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9Py-h9-Srm">
+                                <rect key="frame" x="82" y="29.5" width="181" height="21.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rust" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCW-F8-wDD">
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="ColorTextPurple"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dtB-Sv-HxN">
+                                <rect key="frame" x="273" y="34" width="16" height="12.5"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dtB-Sv-HxN" secondAttribute="height" multiplier="1:1" id="Z23-9P-Cdd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="NewContainerColor"/>
+                        <constraints>
+                            <constraint firstItem="9Py-h9-Srm" firstAttribute="leading" secondItem="bJA-9R-qNV" secondAttribute="trailing" constant="10" id="CyA-Z8-bMH"/>
+                            <constraint firstItem="dtB-Sv-HxN" firstAttribute="leading" secondItem="9Py-h9-Srm" secondAttribute="trailing" constant="10" id="H2M-cT-TUt"/>
+                            <constraint firstItem="bJA-9R-qNV" firstAttribute="height" secondItem="SHr-hz-ugm" secondAttribute="height" multiplier="0.9" id="KZz-Y8-BgF"/>
+                            <constraint firstItem="9Py-h9-Srm" firstAttribute="centerY" secondItem="SHr-hz-ugm" secondAttribute="centerY" id="OtD-Qn-Wg0"/>
+                            <constraint firstAttribute="trailing" secondItem="dtB-Sv-HxN" secondAttribute="trailing" constant="15" id="Pyk-QW-Qy7"/>
+                            <constraint firstItem="bJA-9R-qNV" firstAttribute="leading" secondItem="SHr-hz-ugm" secondAttribute="leading" id="gyb-Z1-czG"/>
+                            <constraint firstItem="dtB-Sv-HxN" firstAttribute="height" secondItem="SHr-hz-ugm" secondAttribute="height" multiplier="0.2" id="lnc-Nd-oMT"/>
+                            <constraint firstItem="bJA-9R-qNV" firstAttribute="centerY" secondItem="SHr-hz-ugm" secondAttribute="centerY" id="pRG-qC-4XV"/>
+                            <constraint firstItem="dtB-Sv-HxN" firstAttribute="centerY" secondItem="SHr-hz-ugm" secondAttribute="centerY" id="wyx-kt-Dtq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SHr-hz-ugm" firstAttribute="width" secondItem="j5u-yq-Ali" secondAttribute="width" multiplier="0.95" id="8Di-nq-aw2"/>
+                    <constraint firstItem="SHr-hz-ugm" firstAttribute="centerY" secondItem="j5u-yq-Ali" secondAttribute="centerY" id="CYu-Ka-Qtr"/>
+                    <constraint firstItem="SHr-hz-ugm" firstAttribute="height" secondItem="j5u-yq-Ali" secondAttribute="height" multiplier="0.8" id="Djm-ZP-3OG"/>
+                    <constraint firstItem="SHr-hz-ugm" firstAttribute="centerX" secondItem="j5u-yq-Ali" secondAttribute="centerX" id="gq7-hx-dKq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="CtN-6L-jgX"/>
+            <color key="backgroundColor" name="NewContainerColor"/>
+            <connections>
+                <outlet property="titleLabel" destination="YCW-F8-wDD" id="OtH-jP-OPG"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="-6"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="icnPathCategory" width="40" height="40"/>
+        <namedColor name="ColorTextPurple">
+            <color red="0.38400000333786011" green="0.0" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NewContainerColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
