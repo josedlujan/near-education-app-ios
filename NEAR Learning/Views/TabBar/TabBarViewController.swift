@@ -51,4 +51,18 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     return navigationController
   }
   
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+           // style all the tab bar windows and the More tab bar tableview
+           if viewController == moreNavigationController,
+               let moreTableView = moreNavigationController.topViewController?.view as? UITableView {
+               view.tintColor = .white
+               moreNavigationController.navigationBar.tintColor = .white
+               moreTableView.tintColor = .white
+               moreTableView.backgroundColor =  UIColor(named: "GeneralColor")
+               moreTableView.visibleCells.forEach {
+                   $0.backgroundColor =  UIColor(named: "GeneralColor")
+                   $0.textLabel?.textColor = .white
+               }
+           }
+       }
 }
