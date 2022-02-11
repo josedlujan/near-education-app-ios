@@ -25,7 +25,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     view.backgroundColor = UIColor(named: "GeneralColor")
   }
   
-  
   func createViewControllers() {
     let tabHome = tabItem(viewController: HomeViewController(), title: "Inicio", image: UIImage(named: "icnHome")!)
     let tabPath = tabItem(viewController: PathViewController(), title: "Path", image: UIImage(named: "icnPath")!)
@@ -51,18 +50,23 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     return navigationController
   }
   
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-           // style all the tab bar windows and the More tab bar tableview
-           if viewController == moreNavigationController,
-               let moreTableView = moreNavigationController.topViewController?.view as? UITableView {
-               view.tintColor = .white
-               moreNavigationController.navigationBar.tintColor = .white
-               moreTableView.tintColor = .white
-               moreTableView.backgroundColor =  UIColor(named: "GeneralColor")
-               moreTableView.visibleCells.forEach {
-                   $0.backgroundColor =  UIColor(named: "GeneralColor")
-                   $0.textLabel?.textColor = .white
-               }
-           }
-       }
+  
+  func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    // style all the tab bar windows and the More tab bar tableview
+    if viewController == self.moreNavigationController,
+       let moreTableView = self.moreNavigationController.topViewController?.view as? UITableView {
+      self.view.tintColor = UIColor(named: "GeneralColor")
+      self.moreNavigationController.navigationBar.tintColor = .white
+      moreTableView.tintColor = .white
+      moreTableView.backgroundColor =  UIColor(named: "GeneralColor")
+      DispatchQueue.main.async {
+        moreTableView.visibleCells.forEach {
+          debugPrint("numero de iteracinoes")
+          $0.backgroundColor =  UIColor(named: "GeneralColor")
+          $0.textLabel?.textColor = .white
+        }
+      }
+    }
+  }
+  
 }

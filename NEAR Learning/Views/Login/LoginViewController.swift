@@ -81,6 +81,7 @@ extension LoginViewController: LoginPresenterView {
   }
   
   func login() {
+    view.endEditing(true)
     let notification = NotificationCenter.default
     notification.post(name: Notification.Name(rawValue: "successfullyLogin"),
             object: nil,

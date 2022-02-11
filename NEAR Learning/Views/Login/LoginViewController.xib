@@ -103,7 +103,7 @@
                                         <action selector="recoverAccount:" destination="-1" eventType="touchUpInside" id="qJy-TZ-Cwh"/>
                                     </connections>
                                 </button>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-Mk-7iS">
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-Mk-7iS">
                                     <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnCheckOff" translatesAutoresizingMaskIntoConstraints="NO" id="Gw2-aP-1hR">
