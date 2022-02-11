@@ -3,6 +3,16 @@
     {
       "filename" : "icnGoal.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "icn_goal_d.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

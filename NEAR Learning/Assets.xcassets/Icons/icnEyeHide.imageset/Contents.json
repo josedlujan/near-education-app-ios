@@ -3,6 +3,16 @@
     {
       "filename" : "icnEyeHide.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "icnEyeHide_d.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

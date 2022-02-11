@@ -3,6 +3,16 @@
     {
       "filename" : "icnLevel.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "icnLeveld.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {
