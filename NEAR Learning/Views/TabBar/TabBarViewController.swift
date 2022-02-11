@@ -23,6 +23,11 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     tabBar.unselectedItemTintColor = .lightGray
     tabBar.barTintColor = UIColor(named: "GeneralColor")
     view.backgroundColor = UIColor(named: "GeneralColor")
+      moreNavigationController.navigationBar.isTranslucent = false
+      moreNavigationController.title = ""
+      moreNavigationController.navigationBar.tintColor = .white
+      moreNavigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+      moreNavigationController.transparetNavigationBar()
   }
   
   func createViewControllers() {
@@ -61,9 +66,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
       moreTableView.backgroundColor =  UIColor(named: "GeneralColor")
       DispatchQueue.main.async {
         moreTableView.visibleCells.forEach {
-          debugPrint("numero de iteracinoes")
           $0.backgroundColor =  UIColor(named: "GeneralColor")
           $0.textLabel?.textColor = .white
+          $0.selectionStyle = .none
+          $0.accessoryView?.tintColor = .white
         }
       }
     }
