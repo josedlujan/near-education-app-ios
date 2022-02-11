@@ -35,7 +35,7 @@
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qo-5V-fth">
                     <rect key="frame" x="41.5" y="812" width="331" height="40"/>
-                    <color key="backgroundColor" name="ColorTextPurple"/>
+                    <color key="backgroundColor" name="GeneralColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Ycj-mn-p1Q"/>
                     </constraints>
@@ -66,11 +66,8 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="ColorTextPurple">
-            <color red="0.38400000333786011" green="0.0" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="GeneralColor">
-            <color red="0.38400000333786011" green="0.0" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="WhiteCustomColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

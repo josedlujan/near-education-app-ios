@@ -37,8 +37,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programin languaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqp-Mx-JQj">
-                                        <rect key="frame" x="0.0" y="21.5" width="132" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="21.5" width="138.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -52,7 +52,6 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" name="NewContainerColor"/>
                         <constraints>
                             <constraint firstItem="gLj-gc-Jjf" firstAttribute="centerY" secondItem="ksO-c4-0uB" secondAttribute="centerY" id="0EM-7K-7M4"/>
                             <constraint firstItem="gLj-gc-Jjf" firstAttribute="height" secondItem="ksO-c4-0uB" secondAttribute="height" multiplier="0.2" id="6P3-Bx-VQA"/>
@@ -74,7 +73,6 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="tG3-Tw-kHd"/>
-            <color key="backgroundColor" name="NewContainerColor"/>
             <connections>
                 <outlet property="subtitleLabel" destination="Lqp-Mx-JQj" id="EYQ-fD-0cx"/>
                 <outlet property="titleLabel" destination="w6Z-Qc-41K" id="4lY-Za-bEu"/>
@@ -86,10 +84,7 @@
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="icnLesson" width="40" height="40"/>
         <namedColor name="ColorTextPurple">
-            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="NewContainerColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.38400000333786011" green="0.0" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -73,6 +73,11 @@
 		6A62B92C27AE309B00A34A89 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62B92A27AE309B00A34A89 /* AnswerCell.xib */; };
 		6A62B92F27AE32D600A34A89 /* SelectedAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A62B92D27AE32D600A34A89 /* SelectedAnswerCell.swift */; };
 		6A62B93027AE32D600A34A89 /* SelectedAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62B92E27AE32D600A34A89 /* SelectedAnswerCell.xib */; };
+		6AB0FD7527B5DC7500B819B9 /* PathDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB0FD7327B5DC7500B819B9 /* PathDetailCell.swift */; };
+		6AB0FD7627B5DC7500B819B9 /* PathDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AB0FD7427B5DC7500B819B9 /* PathDetailCell.xib */; };
+		6AB0FD7A27B5E14C00B819B9 /* PathDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB0FD7827B5E14C00B819B9 /* PathDetailViewController.swift */; };
+		6AB0FD7B27B5E14C00B819B9 /* PathDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AB0FD7927B5E14C00B819B9 /* PathDetailViewController.xib */; };
+		6AB0FD7D27B5E31000B819B9 /* PathDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB0FD7C27B5E31000B819B9 /* PathDetailPresenter.swift */; };
 		6AB9B0F727A50FA800F238CF /* ViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9B0F627A50FA800F238CF /* ViewController+Action.swift */; };
 		6AD0D1C927ACEEAD008B5D3F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1C827ACEEAD008B5D3F /* Realm */; };
 		6AD0D1CB27ACEEAD008B5D3F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1CA27ACEEAD008B5D3F /* RealmSwift */; };
@@ -80,6 +85,8 @@
 		6AD0D1D027AD9E3B008B5D3F /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD0D1CF27AD9E3B008B5D3F /* NVActivityIndicatorViewExtended */; };
 		6AE809AC27B4BC3400BBEAB3 /* Evaluate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE809AB27B4BC3400BBEAB3 /* Evaluate.swift */; };
 		6AE809AE27B5804700BBEAB3 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE809AD27B5804700BBEAB3 /* UserSession.swift */; };
+		6AE809B127B5D32800BBEAB3 /* PathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE809AF27B5D32800BBEAB3 /* PathCell.swift */; };
+		6AE809B227B5D32800BBEAB3 /* PathCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE809B027B5D32800BBEAB3 /* PathCell.xib */; };
 		873F00A527ACBD02003B1627 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A427ACBD02003B1627 /* FirebaseService.swift */; };
 		873F00A727ACC5A2003B1627 /* QuestionBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A627ACC5A2003B1627 /* QuestionBO.swift */; };
 		873F00A927ACC5D2003B1627 /* CategoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F00A827ACC5D2003B1627 /* CategoryItemModel.swift */; };
@@ -201,9 +208,16 @@
 		6A62B92A27AE309B00A34A89 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
 		6A62B92D27AE32D600A34A89 /* SelectedAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnswerCell.swift; sourceTree = "<group>"; };
 		6A62B92E27AE32D600A34A89 /* SelectedAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedAnswerCell.xib; sourceTree = "<group>"; };
+		6AB0FD7327B5DC7500B819B9 /* PathDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDetailCell.swift; sourceTree = "<group>"; };
+		6AB0FD7427B5DC7500B819B9 /* PathDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathDetailCell.xib; sourceTree = "<group>"; };
+		6AB0FD7827B5E14C00B819B9 /* PathDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDetailViewController.swift; sourceTree = "<group>"; };
+		6AB0FD7927B5E14C00B819B9 /* PathDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathDetailViewController.xib; sourceTree = "<group>"; };
+		6AB0FD7C27B5E31000B819B9 /* PathDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDetailPresenter.swift; sourceTree = "<group>"; };
 		6AB9B0F627A50FA800F238CF /* ViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Action.swift"; sourceTree = "<group>"; };
 		6AE809AB27B4BC3400BBEAB3 /* Evaluate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluate.swift; sourceTree = "<group>"; };
 		6AE809AD27B5804700BBEAB3 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		6AE809AF27B5D32800BBEAB3 /* PathCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCell.swift; sourceTree = "<group>"; };
+		6AE809B027B5D32800BBEAB3 /* PathCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathCell.xib; sourceTree = "<group>"; };
 		873F00A427ACBD02003B1627 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		873F00A627ACC5A2003B1627 /* QuestionBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionBO.swift; path = "NEAR Learning/BO/QuestionBO.swift"; sourceTree = SOURCE_ROOT; };
 		873F00A827ACC5D2003B1627 /* CategoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemModel.swift; sourceTree = "<group>"; };
@@ -297,6 +311,10 @@
 				6A1B5FCF27AEA15100B56400 /* QuestionCell.xib */,
 				6A1508D427B356A700C6D8BC /* LessonDetailCell.swift */,
 				6A1508D527B356A700C6D8BC /* LessonDetailCell.xib */,
+				6AE809AF27B5D32800BBEAB3 /* PathCell.swift */,
+				6AE809B027B5D32800BBEAB3 /* PathCell.xib */,
+				6AB0FD7327B5DC7500B819B9 /* PathDetailCell.swift */,
+				6AB0FD7427B5DC7500B819B9 /* PathDetailCell.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -399,6 +417,7 @@
 		48F5F1542748025300DCF0FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6AB0FD7727B5E13200B819B9 /* PathDetail */,
 				6A1508DA27B4A18200C6D8BC /* Evaluate */,
 				6A1508CF27B351B100C6D8BC /* LessonDetail */,
 				6A37CD2827AE9E800093AF8D /* Question */,
@@ -433,6 +452,7 @@
 				87DD1ACB27B383360045752D /* PathPresenter.swift */,
 				6A1508D827B364E900C6D8BC /* LessonDetailPresenter.swift */,
 				6A1508DF27B4A7CC00C6D8BC /* EvaluatePresenter.swift */,
+				6AB0FD7C27B5E31000B819B9 /* PathDetailPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -537,6 +557,15 @@
 				6A37CD2A27AE9E9A0093AF8D /* QuestionViewController.xib */,
 			);
 			path = Question;
+			sourceTree = "<group>";
+		};
+		6AB0FD7727B5E13200B819B9 /* PathDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6AB0FD7827B5E14C00B819B9 /* PathDetailViewController.swift */,
+				6AB0FD7927B5E14C00B819B9 /* PathDetailViewController.xib */,
+			);
+			path = PathDetail;
 			sourceTree = "<group>";
 		};
 		873F00A327ACBCDC003B1627 /* Service */ = {
@@ -721,9 +750,11 @@
 				48F5F15E2748077700DCF0FD /* LoginViewController.xib in Resources */,
 				48F5F1302748012F00DCF0FD /* LaunchScreen.storyboard in Resources */,
 				6A37CD2527AE82530093AF8D /* GoalViewController.xib in Resources */,
+				6AB0FD7627B5DC7500B819B9 /* PathDetailCell.xib in Resources */,
 				481EA9302759DCE6007678A3 /* TestViewController.xib in Resources */,
 				4808886F2752729700BD0EED /* CoursesCell.xib in Resources */,
 				6A62B93027AE32D600A34A89 /* SelectedAnswerCell.xib in Resources */,
+				6AB0FD7B27B5E14C00B819B9 /* PathDetailViewController.xib in Resources */,
 				6A62B92C27AE309B00A34A89 /* AnswerCell.xib in Resources */,
 				6A1508DE27B4A19C00C6D8BC /* EvaluateViewController.xib in Resources */,
 				6A187F5D27A7914700AD5CA5 /* NewCell.xib in Resources */,
@@ -735,6 +766,7 @@
 				875D4D4727A3B34600B09175 /* GoogleService-Info.plist in Resources */,
 				48F5F12D2748012F00DCF0FD /* Assets.xcassets in Resources */,
 				48F5F12B2748012B00DCF0FD /* Main.storyboard in Resources */,
+				6AE809B227B5D32800BBEAB3 /* PathCell.xib in Resources */,
 				481EA9382759DD0E007678A3 /* SnippetViewController.xib in Resources */,
 				481EA9402759DEDE007678A3 /* TestCell.xib in Resources */,
 				48DAB5F1276574E600EA891F /* LessonCell.xib in Resources */,
@@ -785,6 +817,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB0FD7527B5DC7500B819B9 /* PathDetailCell.swift in Sources */,
 				6A1508D627B356A700C6D8BC /* LessonDetailCell.swift in Sources */,
 				6A37CD1F27AE7FAF0093AF8D /* LevelCell.swift in Sources */,
 				6A1508D927B364E900C6D8BC /* LessonDetailPresenter.swift in Sources */,
@@ -816,6 +849,7 @@
 				87DD1AD027B38F050045752D /* Encodable+Action.swift in Sources */,
 				48F5F1592748071000DCF0FD /* RootViewController.swift in Sources */,
 				6A37CD1A27AE6E020093AF8D /* Session.swift in Sources */,
+				6AB0FD7A27B5E14C00B819B9 /* PathDetailViewController.swift in Sources */,
 				6A1508D227B351E800C6D8BC /* LessonDetailViewController.swift in Sources */,
 				6A1B5FD027AEA15100B56400 /* QuestionCell.swift in Sources */,
 				6AE809AC27B4BC3400BBEAB3 /* Evaluate.swift in Sources */,
@@ -837,8 +871,10 @@
 				6A1B5FD327AEA25900B56400 /* QuestionPresenter.swift in Sources */,
 				481EA92F2759DCE6007678A3 /* TestViewController.swift in Sources */,
 				48F5F1262748012B00DCF0FD /* SceneDelegate.swift in Sources */,
+				6AE809B127B5D32800BBEAB3 /* PathCell.swift in Sources */,
 				6AB9B0F727A50FA800F238CF /* ViewController+Action.swift in Sources */,
 				87A04D2827B204CA00A541E9 /* String+Action.swift in Sources */,
+				6AB0FD7D27B5E31000B819B9 /* PathDetailPresenter.swift in Sources */,
 				4808886A27526A1E00BD0EED /* TabBarViewController.swift in Sources */,
 				873F00AB27ACC913003B1627 /* LevelItemModel.swift in Sources */,
 				6A1508E027B4A7CC00C6D8BC /* EvaluatePresenter.swift in Sources */,
@@ -1028,7 +1064,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FW5Z9GGJ86;
+				DEVELOPMENT_TEAM = 6PU58N93KN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1057,7 +1093,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FW5Z9GGJ86;
+				DEVELOPMENT_TEAM = 6PU58N93KN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NEAR Learning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

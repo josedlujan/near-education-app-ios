@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "icnLogoBlack.pdf",
+      "filename" : "icnPathCategory.pdf",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "icnLogoGrayDark.pdf",
+      "filename" : "icnPathCategoryDark.pdf",
       "idiom" : "universal"
     }
   ],

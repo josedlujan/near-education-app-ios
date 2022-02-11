@@ -16,14 +16,14 @@ class LevelCell: UITableViewCell {
   let session = UserSession.sharedInstance
   
   override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
+    super.awakeFromNib()
+    // Initialization code
+  }
+  
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+    // Configure the view for the selected state
+  }
   
   func bindWithLevel(level: LevelItem){
     titleLabel.text = "Nivel: \(level.levelNumber)"
@@ -42,9 +42,10 @@ class LevelCell: UITableViewCell {
       }
     }
   }
-    
-    func bindWithSnippet(snippet:SnippetItem){
-        titleLabel.text = snippet.title
-        subtitleLabel.text = ""
-    }
+  
+  func bindWithSnippet(snippet:SnippetItem){
+    titleLabel.text = snippet.title
+    subtitleLabel.text = ""
+    stkEvaluation.isHidden = true
+  }
 }

@@ -1,70 +1,63 @@
 //
-//  PathViewController.swift
+//  PathDetailViewController.swift
 //  NEAR Learning
 //
-//  Created by Josue Hernandez on 02/12/21.
+//  Created by Isaac R on 10/02/22.
 //
 
 import UIKit
 import NVActivityIndicatorView
-class PathViewController: UIViewController {
+
+class PathDetailViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
-  lazy var presenter = PathPresenter(with: self)
+  lazy var presenter = PathDetailPresenter(with: self)
   private var activityIndicator: NVActivityIndicatorView!
+  var categoryId: String = ""
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
+    pathsCallback()
   }
   
   private func setupUI(){
-    title = "Path"
-    tableView.register(UINib(nibName: "PathCell", bundle: nil), forCellReuseIdentifier: "PathCell")
+    tableView.register(UINib(nibName: "PathDetailCell", bundle: nil), forCellReuseIdentifier: "PathDetailCell")
     setupActivityIndicator()
-    pathsCallback()
   }
+  
   private func setupActivityIndicator(){
     activityIndicator = activityIndicator()
     view.addSubview(activityIndicator)
   }
+  
   private func pathsCallback(){
     presenter.indicatorView(present: true)
-    presenter.getPathCateories{
+    presenter.getPathsByCategory(idCategory: categoryId) {
       self.presenter.indicatorView(present: false)
       self.tableView.reloadData()
     }
   }
 }
 
-extension PathViewController: UITableViewDataSource, UITableViewDelegate {
+extension PathDetailViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return presenter.categories.count
+    return presenter.paths.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "PathCell", for: indexPath) as? PathCell else {fatalError("")}
-    let pathCategory = presenter.categories[indexPath.row]
-    cell.bindWithPath(pathCategory: pathCategory)
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "PathDetailCell", for: indexPath) as? PathDetailCell else {fatalError("")}
+    let path = presenter.paths[indexPath.row]
+    cell.bindWithPath(path: path)
+    cell.delegate = self
     return cell
   }
   
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let pathCategory = presenter.categories[indexPath.row]
-    let PathDetailVC = PathDetailViewController()
-    PathDetailVC.categoryId = pathCategory.id
-    navigationItem.backButtonTitle = ""
-    navigationController?.pushViewController(PathDetailVC, animated: true)
-  }
-  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    let screen = UIScreen.main.bounds
-    return screen.height * 0.15
+    return tableView.rowHeight
   }
-  
 }
 
-
-
-extension PathViewController:PathPresenterView{
+extension PathDetailViewController: PathDetailPresenterView {
   func showMessage(message: String) {
     debugPrint(message)
   }
@@ -76,5 +69,12 @@ extension PathViewController:PathPresenterView{
     case false:
       activityIndicator.stopAnimating()
     }
+  }
+}
+
+extension PathDetailViewController: PathDetailDelegate {
+  func goCourse(url: String) {
+    let urlOpen = URL(string: url)
+    openSafariVC(url: urlOpen!)
   }
 }

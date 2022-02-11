@@ -4,14 +4,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PathViewController" customModule="NEAR_Learning" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PathDetailViewController" customModule="NEAR_Learning" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="6BV-tN-iBK" id="Hbp-nv-W14"/>
+                <outlet property="tableView" destination="26k-F6-Hah" id="gGe-AS-bgt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,27 +21,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6BV-tN-iBK">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="26k-F6-Hah">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="cSd-DU-erQ"/>
-                        <outlet property="delegate" destination="-1" id="d8p-si-ayg"/>
+                        <outlet property="dataSource" destination="-1" id="FjM-5j-c1s"/>
+                        <outlet property="delegate" destination="-1" id="PVJ-tK-fal"/>
                     </connections>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="GeneralColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6BV-tN-iBK" secondAttribute="bottom" id="GCF-Z5-nmI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6BV-tN-iBK" secondAttribute="trailing" id="IdA-x0-5bj"/>
-                <constraint firstItem="6BV-tN-iBK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eak-8H-TZw"/>
-                <constraint firstItem="6BV-tN-iBK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mzQ-Zh-wIN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="26k-F6-Hah" secondAttribute="trailing" id="2h1-lF-YBF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="26k-F6-Hah" secondAttribute="bottom" id="5iX-Td-6ov"/>
+                <constraint firstItem="26k-F6-Hah" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Duf-6f-E5B"/>
+                <constraint firstItem="26k-F6-Hah" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="M1Q-Xc-Raj"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="79"/>
+            <point key="canvasLocation" x="139" y="82"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="GeneralColor">
+            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
