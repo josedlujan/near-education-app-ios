@@ -9,6 +9,7 @@ import Foundation
 
 protocol RecoveryAccountPresenterView: AnyObject {
   func recovery()
+  func error(value: String)
 }
 
 class RecoveryAccountPresenter {
@@ -18,6 +19,11 @@ class RecoveryAccountPresenter {
   }
   
   func recoveyAction(email: String) {
-    view?.recovery()
+      let signupBO = SignupBO()
+      signupBO.passwordReset(email:email ,onSuccess:{[weak self] in
+          self?.view?.recovery()
+      }, onFailure: {[weak self]error in
+          self?.view?.error(value: error)
+      })
   }
 }

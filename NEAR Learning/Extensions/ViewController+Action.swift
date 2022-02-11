@@ -15,6 +15,13 @@ extension UIViewController {
     alertController.addAction(alertAction)
     present(alertController, animated: true, completion: nil)
   }
+    
+    func alertHandler(_ title: String, message: String,dismiss: String, completion: @escaping (UIAlertAction) -> Void ){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title:dismiss, style: .default, handler: completion)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
+    }
   
   func activityIndicator() -> NVActivityIndicatorView {
     let screen = UIScreen.main.bounds

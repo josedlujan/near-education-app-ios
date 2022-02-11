@@ -37,4 +37,15 @@ class SignupBO {
       }
     }
   }
+    func passwordReset(email:String,onSuccess: @escaping() -> Void,onFailure: @escaping(_ error: String) -> Void){
+        Auth.auth().sendPasswordReset(withEmail: email){error in
+            if error == nil {
+              onSuccess()
+            } else{
+              guard let errorLocalized = error else {return}
+              onFailure(errorLocalized.localizedDescription)
+            }
+        }
+    }
+    
 }

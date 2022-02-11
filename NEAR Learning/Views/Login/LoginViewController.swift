@@ -22,8 +22,8 @@ class LoginViewController: UIViewController {
     textFieldPassword.enablePasswordToggle()
     setupRecoverAccount()
     setupActivityIndicator()
-    textFieldEmail.text = "isaac@gmail.com"
-    textFieldPassword.text = "1234qwer"
+    //textFieldEmail.text = "isaac@gmail.com"
+    //textFieldPassword.text = "1234qwer"
     // Do any additional setup after loading the view.
   }
   
