@@ -69,7 +69,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
           $0.backgroundColor =  UIColor(named: "GeneralColor")
           $0.textLabel?.textColor = .white
           $0.selectionStyle = .none
-          $0.accessoryView?.tintColor = .white
         }
       }
     }
