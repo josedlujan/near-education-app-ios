@@ -8,14 +8,15 @@
 import UIKit
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      createViewControllers()
-      self.delegate = self
-      selectedIndex = 0
-        // Do any additional setup after loading the view.
-    }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    createViewControllers()
+    self.delegate = self
+    selectedIndex = 0
+    // Do any additional setup after loading the view.
+  }
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     tabBar.tintColor = .white
@@ -23,7 +24,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     tabBar.barTintColor = UIColor(named: "GeneralColor")
     view.backgroundColor = UIColor(named: "GeneralColor")
   }
-
+  
   
   func createViewControllers() {
     let tabHome = tabItem(viewController: HomeViewController(), title: "Inicio", image: UIImage(named: "icnHome")!)
@@ -31,13 +32,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     let tabSnippets = tabItem(viewController:CategorySnippetViewController(), title: "Snippets", image: UIImage(named: "icnSnippets")!)
     let tabLessons = tabItem(viewController: LessonViewController(), title: "Lecciones", image: UIImage(named: "icnLessons")!)
     let tabTest = tabItem(viewController: TestViewController(), title: "Test", image: UIImage(named: "icnTest")!)
-    self.viewControllers = [tabHome, tabPath, tabSnippets, tabLessons, tabTest]
+    let tabLogOut = tabItem(viewController: LogOutViewController(), title: "Cerrar sesión", image: UIImage(named: "icnLogOut")!)
+    self.viewControllers = [tabHome, tabPath, tabSnippets, tabLessons, tabTest, tabLogOut]
   }
-  
-  func setImageToTabItem(){
-    
-  }
-  
   
   func tabItem(viewController: UIViewController, title: String, image: UIImage) -> UIViewController {
     let navigationController = UINavigationController(rootViewController: viewController)
