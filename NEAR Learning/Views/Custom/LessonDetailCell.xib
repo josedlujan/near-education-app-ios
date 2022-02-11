@@ -25,8 +25,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEAR MEXICO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9R-Rh-LBB">
-                        <rect key="frame" x="15" y="220" width="192" height="35"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="29"/>
+                        <rect key="frame" x="15" y="220" width="194.5" height="35"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
                         <color key="textColor" name="InputTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -87,7 +87,7 @@
     </objects>
     <resources>
         <namedColor name="InputTextColor">
-            <color red="0.52899998426437378" green="0.23899999260902405" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.52941176470588236" green="0.23921568627450979" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

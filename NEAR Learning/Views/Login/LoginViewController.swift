@@ -59,7 +59,6 @@ class LoginViewController: UIViewController {
     presenter.recoveryAccountAction()
   }
   @IBAction func signUpAction(_ sender: UIButton) {
-    presenter.indicatorView(present: true)
     presenter.signUpAction()
   }
 }

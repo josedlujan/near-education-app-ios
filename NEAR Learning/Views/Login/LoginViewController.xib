@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -70,10 +71,12 @@
                             <rect key="frame" x="0.0" y="140" width="374" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c2-eG-Zz8">
-                                    <rect key="frame" x="123.5" y="9.5" width="127.5" height="31"/>
-                                    <color key="tintColor" red="0.91764706370000004" green="0.91764706370000004" blue="0.91764706370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="120.5" y="10" width="133" height="30.5"/>
+                                    <color key="tintColor" name="WhiteCustomColor"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="INICIAR SESION"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="INICIAR SESION">
+                                        <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                    </buttonConfiguration>
                                     <connections>
                                         <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="Nqw-Ap-Huq"/>
                                     </connections>
@@ -140,7 +143,9 @@
                     </constraints>
                     <color key="tintColor" name="GrayCustomColor"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="REGISTRARSE"/>
+                    <buttonConfiguration key="configuration" style="plain" title="REGISTRARSE">
+                        <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="signUpAction:" destination="-1" eventType="touchUpInside" id="fcl-UY-5iW"/>
                     </connections>
@@ -149,14 +154,14 @@
                     <rect key="frame" x="103.5" y="152.5" width="207" height="53.5"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIENVENIDO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaW-5o-npR">
-                    <rect key="frame" x="144.5" y="216" width="125.5" height="26.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <rect key="frame" x="142.5" y="216" width="129.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                     <color key="textColor" name="GeneralColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="LoginViewColor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <color key="tintColor" name="LoginViewColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CrT-ZL-m1d" secondAttribute="trailing" constant="20" id="0x6-36-EUK"/>
@@ -177,16 +182,16 @@
         </view>
     </objects>
     <resources>
-        <image name="icnCheckOff" width="50" height="50"/>
+        <image name="icnCheckOff" width="512" height="512"/>
         <image name="icnLogoBlack" width="120" height="33"/>
         <namedColor name="ContainerLoginColor">
-            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9179999828338623" green="0.9179999828338623" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GeneralColor">
-            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.38400000333786011" green="0.0" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GrayCustomColor">
-            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LoginViewColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,5 +199,11 @@
         <namedColor name="TextGeneralColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="WhiteCustomColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -55,6 +55,11 @@ extension PathViewController: UITableViewDataSource, UITableViewDelegate {
     navigationController?.pushViewController(PathDetailVC, animated: true)
   }
   
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    let screen = UIScreen.main.bounds
+    return screen.height * 0.15
+  }
+  
 }
 
 

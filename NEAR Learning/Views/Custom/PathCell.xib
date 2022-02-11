@@ -46,7 +46,6 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" name="NewContainerColor"/>
                         <constraints>
                             <constraint firstItem="9Py-h9-Srm" firstAttribute="leading" secondItem="bJA-9R-qNV" secondAttribute="trailing" constant="10" id="CyA-Z8-bMH"/>
                             <constraint firstItem="dtB-Sv-HxN" firstAttribute="leading" secondItem="9Py-h9-Srm" secondAttribute="trailing" constant="10" id="H2M-cT-TUt"/>
@@ -68,7 +67,6 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="CtN-6L-jgX"/>
-            <color key="backgroundColor" name="NewContainerColor"/>
             <connections>
                 <outlet property="titleLabel" destination="YCW-F8-wDD" id="OtH-jP-OPG"/>
             </connections>
@@ -80,9 +78,6 @@
         <image name="icnPathCategory" width="40" height="40"/>
         <namedColor name="ColorTextPurple">
             <color red="0.38400000333786011" green="0.0" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="NewContainerColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

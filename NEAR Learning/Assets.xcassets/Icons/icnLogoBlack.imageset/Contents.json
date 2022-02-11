@@ -3,6 +3,16 @@
     {
       "filename" : "icnLogoBlack.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "icnLogoGrayDark.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

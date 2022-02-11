@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,7 +46,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQ7-zt-lN6">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
-                                    <color key="tintColor" name="InputTextColor"/>
+                                    <color key="tintColor" name="GeneralColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="RECUPERAR"/>
                                     <connections>
@@ -55,7 +54,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="WhiteCustomColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="HQ7-zt-lN6" secondAttribute="trailing" id="HiW-IW-xR3"/>
                                 <constraint firstItem="HQ7-zt-lN6" firstAttribute="centerX" secondItem="2qw-Vx-5KQ" secondAttribute="centerX" id="Mrf-ZO-8TN"/>
@@ -72,15 +71,15 @@
                     <rect key="frame" x="103.5" y="152.5" width="207" height="53.5"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECUPERAR CUENTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agH-Sa-KZT">
-                    <rect key="frame" x="101" y="216" width="212" height="26.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <rect key="frame" x="98" y="216" width="218.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                     <color key="textColor" name="WhiteCustomColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <color key="tintColor" red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="PurpleDark"/>
+            <color key="tintColor" name="PurpleDark"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="klf-ul-Q8f" secondAttribute="trailing" constant="20" id="104-48-QTy"/>
                 <constraint firstItem="9dm-g1-laX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6WC-Zy-UVl"/>
@@ -98,14 +97,17 @@
     </objects>
     <resources>
         <image name="icnLogoGray" width="120" height="33"/>
+        <namedColor name="GeneralColor">
+            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="InputTextColor">
             <color red="0.52941176470588236" green="0.23921568627450979" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PurpleDark">
+            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="WhiteCustomColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
