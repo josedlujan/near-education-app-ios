@@ -22,7 +22,7 @@ class TestViewController: UIViewController {
   
   private func setupUI(){
     tableView.register(UINib(nibName: "TestCell", bundle: nil), forCellReuseIdentifier: "TestCell")
-    title = "Test"
+    title = "Quiz"
     setupActivityIndicator()
   }
   

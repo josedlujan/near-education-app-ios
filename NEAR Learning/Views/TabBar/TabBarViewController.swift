@@ -35,7 +35,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     let tabPath = tabItem(viewController: PathViewController(), title: "Path", image: UIImage(named: "icnPath")!)
     let tabSnippets = tabItem(viewController:CategorySnippetViewController(), title: "Snippets", image: UIImage(named: "icnSnippets")!)
     let tabLessons = tabItem(viewController: LessonViewController(), title: "Lecciones", image: UIImage(named: "icnLessons")!)
-    let tabTest = tabItem(viewController: TestViewController(), title: "Test", image: UIImage(named: "icnTest")!)
+    let tabTest = tabItem(viewController: TestViewController(), title: "Quiz", image: UIImage(named: "icnTest")!)
     let tabLogOut = tabItem(viewController: LogOutViewController(), title: "Cerrar sesión", image: UIImage(named: "icnLogOut")!)
     self.viewControllers = [tabHome, tabPath, tabSnippets, tabLessons, tabTest, tabLogOut]
   }
