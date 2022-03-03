@@ -1,3 +1,3 @@
-# near_learling_ios
+# near_education_ios
 App for NEAR Learling
 
