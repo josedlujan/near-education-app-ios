@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TestCell" id="9jZ-pz-DZS" customClass="TestCell" customModule="NEAR_Learning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9jZ-pz-DZS" id="Dow-NZ-lRb">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4PH-r0-ARc">
+                        <rect key="frame" x="8" y="10" width="304" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="na6-pk-yd1">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="na6-pk-yd1" secondAttribute="height" multiplier="1:1" id="UwM-ze-1NM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST GOAL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxo-z9-1vA">
+                                <rect key="frame" x="95" y="30" width="168" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ujg-Om-yI2">
+                                <rect key="frame" x="273" y="34" width="16" height="12.5"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ujg-Om-yI2" secondAttribute="height" multiplier="1:1" id="fht-al-KAu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ujg-Om-yI2" firstAttribute="centerY" secondItem="4PH-r0-ARc" secondAttribute="centerY" id="HCk-ER-ssu"/>
+                            <constraint firstItem="na6-pk-yd1" firstAttribute="leading" secondItem="4PH-r0-ARc" secondAttribute="leading" id="P6o-q2-nbV"/>
+                            <constraint firstItem="na6-pk-yd1" firstAttribute="top" secondItem="4PH-r0-ARc" secondAttribute="top" id="RgD-0l-JQF"/>
+                            <constraint firstItem="bxo-z9-1vA" firstAttribute="leading" secondItem="na6-pk-yd1" secondAttribute="trailing" constant="15" id="Zgr-o0-Imz"/>
+                            <constraint firstAttribute="trailing" secondItem="Ujg-Om-yI2" secondAttribute="trailing" constant="15" id="ezp-dB-qCj"/>
+                            <constraint firstItem="na6-pk-yd1" firstAttribute="height" secondItem="4PH-r0-ARc" secondAttribute="height" id="ihl-oR-QYU"/>
+                            <constraint firstItem="Ujg-Om-yI2" firstAttribute="leading" secondItem="bxo-z9-1vA" secondAttribute="trailing" constant="10" id="spV-sb-pra"/>
+                            <constraint firstItem="Ujg-Om-yI2" firstAttribute="height" secondItem="4PH-r0-ARc" secondAttribute="height" multiplier="0.2" id="vDI-Qh-y9x"/>
+                            <constraint firstItem="bxo-z9-1vA" firstAttribute="centerY" secondItem="4PH-r0-ARc" secondAttribute="centerY" id="zFp-mO-JG0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4PH-r0-ARc" firstAttribute="centerY" secondItem="Dow-NZ-lRb" secondAttribute="centerY" id="CQR-rH-jQO"/>
+                    <constraint firstItem="4PH-r0-ARc" firstAttribute="centerX" secondItem="Dow-NZ-lRb" secondAttribute="centerX" id="NPT-mD-TU0"/>
+                    <constraint firstItem="4PH-r0-ARc" firstAttribute="width" secondItem="Dow-NZ-lRb" secondAttribute="width" multiplier="0.95" id="n3f-Je-33s"/>
+                    <constraint firstItem="4PH-r0-ARc" firstAttribute="height" secondItem="Dow-NZ-lRb" secondAttribute="height" multiplier="0.8" id="qMq-ac-dI9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="GWW-Av-gqB"/>
+            <connections>
+                <outlet property="categoryImage" destination="na6-pk-yd1" id="VfA-f6-Z2r"/>
+                <outlet property="containerView" destination="4PH-r0-ARc" id="aur-pH-oH3"/>
+                <outlet property="titleLabel" destination="bxo-z9-1vA" id="QQZ-TB-YbD"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="placeholder" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
