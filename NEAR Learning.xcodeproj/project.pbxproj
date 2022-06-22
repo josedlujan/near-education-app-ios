@@ -107,6 +107,8 @@
 		876A6AF827A6212400F0F096 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 876A6AF727A6212400F0F096 /* FirebaseFirestoreSwift-Beta */; };
 		876A6AFB27A6251200F0F096 /* NewsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876A6AFA27A6251200F0F096 /* NewsItemModel.swift */; };
 		876A6AFD27A62DE500F0F096 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876A6AFC27A62DE500F0F096 /* NewsPresenter.swift */; };
+		877120642862B61000F23E39 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877120622862B61000F23E39 /* DeleteAccountViewController.swift */; };
+		877120652862B61000F23E39 /* DeleteAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877120632862B61000F23E39 /* DeleteAccountViewController.xib */; };
 		8779226127A3BE5600B41B91 /* SignupBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779226027A3BE5600B41B91 /* SignupBO.swift */; };
 		87A04D1827B1A91300A541E9 /* LessonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A04D1727B1A91300A541E9 /* LessonPresenter.swift */; };
 		87A04D1A27B1C0C700A541E9 /* SnippetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A04D1927B1C0C700A541E9 /* SnippetPresenter.swift */; };
@@ -235,6 +237,8 @@
 		876A6AEC27A61E4500F0F096 /* NewsBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsBO.swift; path = "NEAR Learning/BO/NewsBO.swift"; sourceTree = SOURCE_ROOT; };
 		876A6AFA27A6251200F0F096 /* NewsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemModel.swift; sourceTree = "<group>"; };
 		876A6AFC27A62DE500F0F096 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
+		877120622862B61000F23E39 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
+		877120632862B61000F23E39 /* DeleteAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteAccountViewController.xib; sourceTree = "<group>"; };
 		8779226027A3BE5600B41B91 /* SignupBO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupBO.swift; path = "NEAR Learning/BO/SignupBO.swift"; sourceTree = SOURCE_ROOT; };
 		87A04D1727B1A91300A541E9 /* LessonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPresenter.swift; sourceTree = "<group>"; };
 		87A04D1927B1C0C700A541E9 /* SnippetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetPresenter.swift; sourceTree = "<group>"; };
@@ -438,6 +442,7 @@
 				48F5F15F2748078500DCF0FD /* SignUp */,
 				48F5F15A2748076300DCF0FD /* Login */,
 				48F5F157274806E800DCF0FD /* Root */,
+				877120662862B61C00F23E39 /* DeleteAccount */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -610,6 +615,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		877120662862B61C00F23E39 /* DeleteAccount */ = {
+			isa = PBXGroup;
+			children = (
+				877120622862B61000F23E39 /* DeleteAccountViewController.swift */,
+				877120632862B61000F23E39 /* DeleteAccountViewController.xib */,
+			);
+			name = DeleteAccount;
+			sourceTree = "<group>";
+		};
 		8779225F27A3BDB200B41B91 /* BO */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,6 +785,7 @@
 				6AB0FD7B27B5E14C00B819B9 /* PathDetailViewController.xib in Resources */,
 				6AB0FD8227B61E0B00B819B9 /* LogOutViewController.xib in Resources */,
 				6A62B92C27AE309B00A34A89 /* AnswerCell.xib in Resources */,
+				877120652862B61000F23E39 /* DeleteAccountViewController.xib in Resources */,
 				6A1508DE27B4A19C00C6D8BC /* EvaluateViewController.xib in Resources */,
 				6A187F5D27A7914700AD5CA5 /* NewCell.xib in Resources */,
 				6A1B5FD127AEA15100B56400 /* QuestionCell.xib in Resources */,
@@ -878,6 +893,7 @@
 				87DD1AC827B37AF30045752D /* PathItemModel.swift in Sources */,
 				87DD1ACC27B383360045752D /* PathPresenter.swift in Sources */,
 				6A37CD2427AE82530093AF8D /* GoalViewController.swift in Sources */,
+				877120642862B61000F23E39 /* DeleteAccountViewController.swift in Sources */,
 				48F5F167274809C800DCF0FD /* HomeViewController.swift in Sources */,
 				481EA93B2759DD1B007678A3 /* PathViewController.swift in Sources */,
 				6AB0FD8127B61E0B00B819B9 /* LogOutViewController.swift in Sources */,
